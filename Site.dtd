@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Entités -->
+<!ENTITY % id "id ID #IMPLIED">
+<!ENTITY  %  site
+             "site (Luminy|Saint-Jérome|Luminy_Saint-Jérome) #IMPLIED">
+<!ENTITY dom.amu "@univ-amu.fr">
+<!ENTITY url.lif "http://pageperso.lif.univ-mrs.fr/~">
+<!ENTITY  %  unite
+             "unite (Obligatoire|Option|Bonus) #IMPLIED">            
+<!ENTITY  %  final
+             "final (Recherche|Professionnelle) #IMPLIED">
+
+
+<!-- Racine -->
+<!ELEMENT master_info (intervenants, master+, unites)>
+
+<!-- Liste d'intervenants -->
+<!ELEMENT intervenants (intervenant+)>
+<!ELEMENT intervenant (nom_inter, mail, site)>
+<!ATTLIST intervenant %id;>
+    
+<!-- Master -->
+<!ELEMENT master (nom_master, specialite+)>
+<!ATTLIST master %id;>
+
+<!-- Spécialité -->
+<!ELEMENT specialite (nom_spe, parcours+)>
+<!ATTLIST specialite %id;>
+
+<!-- Parcours -->
+<!ELEMENT parcours (nom_parc, semestre+, responsable+, description, debouche, ref_intervenant+, finalite?, lieu_parc)>
+<!ATTLIST parcours %id;>
+
+<!-- Semestre -->
+<!ELEMENT semestre (nom_sem, bloc_ue+)>
+<!ELEMENT bloc_ue (nom_bloc_ue, ref_ue+)>
+
+
+<!-- UE -->
+<!ELEMENT unites (ue+)>
+<!ELEMENT ue (nom_ue, nb_credits, ref_intervenant+, resume, plan?, lieu_ue+)>
+<!ATTLIST ue %id;>
+
+
+<!-- Feuilles -->
+<!ELEMENT nom_master     (#PCDATA)> 
+<!ELEMENT nom_inter     (#PCDATA)>   
+<!ELEMENT mail     (#PCDATA)>   
+<!ELEMENT site     (#PCDATA)>   
+<!ELEMENT nom_ue     (#PCDATA)> 
+<!ELEMENT ref_ue     (#PCDATA)> 
+<!ELEMENT nb_credits     (#PCDATA)>
+<!ELEMENT resume     ANY>
+<!ELEMENT plan     (#PCDATA)>
+<!ELEMENT lieu_ue    (#PCDATA) >
+<!ATTLIST lieu_ue
+    %site;
+    >
+<!ELEMENT nom_sem     (#PCDATA)>
+<!ELEMENT ref_intervenant     (#PCDATA)>
+<!ELEMENT nom_spe     (#PCDATA)> 
+<!ELEMENT nom_parc     (#PCDATA)>
+<!ELEMENT description     ANY>
+<!ELEMENT debouche     ANY>
+<!ELEMENT responsable     (#PCDATA)>
+<!ATTLIST  responsable  
+	ref  IDREF  #REQUIRED>
+<!ELEMENT finalite     (#PCDATA)>            
+<!ATTLIST finalite
+    %final;
+    >
+<!ELEMENT lieu_parc    (#PCDATA) >                
+<!ATTLIST lieu_parc
+    %site;
+    >
+<!ELEMENT nom_bloc_ue     (#PCDATA)>
+<!ATTLIST nom_bloc_ue
+    %unite;
+    >
+
