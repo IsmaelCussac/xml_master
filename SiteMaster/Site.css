@@ -66,7 +66,7 @@ th {
 	}
 
 
-h1-new {
+.new {
 	font-family: Arial,sans-serif;
 	font-size: large;
 	text-align: left;
@@ -75,9 +75,6 @@ h1-new {
 	border-left: solid 5px #58D3F7;
 	margin-left: 40px;
 	padding-left: 10px;
-/**
-	border: dashed 1px red;
-**/
 	}
 
 h1 {
@@ -146,7 +143,7 @@ legend {
 	padding: 2px 5px 2px 5px;
 	}
 
-fieldset {
+.cadre {
 	border : solid 2px #58D3F7;
 	margin-top: 10px;
 	padding: 7px;

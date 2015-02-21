@@ -143,13 +143,13 @@
 	<xs:element name="nom_master" type="xs:string" />
 	<xs:element name="nom_inter" type="xs:string" />
 	<xs:element name="mail" type="xs:string" />
-	<xs:element name="site" type="xs:string" />
+	<xs:element name="site" type="xs:string" />	
 	<xs:element name="nom_ue" type="xs:string" />
 	<xs:element name="ref_ue" type="xs:string" />
 	<xs:element name="nb_credits">
 		<xs:simpleType>
 			<xs:restriction base="xs:decimal">
-				<xs:minExclusive value='0,5' />
+				<xs:minExclusive value='0.5' />
 				<xs:maxExclusive value='30' />
 			</xs:restriction>
 		</xs:simpleType>
@@ -161,6 +161,7 @@
 			<xs:attributeGroup ref="site" />
 		</xs:complexType>
 	</xs:element>
+	<xs:element name="li" type="xs:string" />
 	<xs:element name="nom_sem" type="xs:string" />
 	<xs:element name="ref_intervenant" type="xs:string" />
 	<xs:element name="nom_spe" type="xs:string" />

@@ -78,4 +78,7 @@
 <!ATTLIST nom_bloc_ue
     %unite;
     >
+<!ELEMENT li     ANY>
+<!ELEMENT ul (li+)>
+<!ELEMENT ol (li+)>
 
