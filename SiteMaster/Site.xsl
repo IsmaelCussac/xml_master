@@ -136,24 +136,16 @@
 							<h1>
 								<xsl:value-of select="nom_master" />
 							</h1>
-
-							<xsl:for-each select="./specialite">
-								<xsl:sort select="nom_spe" />
-								<h2>
-									<xsl:value-of select="nom_spe" />
-								</h2>
-								<ul>
-									<xsl:for-each select="./parcours">
-										<xsl:sort select="nom_parc" />
-										<li>
-											<a href="parcours-{@id}.html">
-												<xsl:value-of select="nom_parc" />
-											</a>
-										</li>
-
-									</xsl:for-each>
-								</ul>
-							</xsl:for-each>
+							<ul>
+								<xsl:for-each select="./specialite">
+									<xsl:sort select="nom_spe" />
+									<li>
+										<a href="specialite-{@id}.html">
+											<xsl:value-of select="nom_spe" />
+										</a>
+									</li>
+								</xsl:for-each>
+							</ul>
 
 						</xsl:for-each>
 
@@ -210,6 +202,29 @@
 			</xsl:document>
 		</xsl:for-each>
 
+		<!-- TOUS DOC SPECIALITE -->
+		<xsl:for-each select="//specialite">
+			<xsl:document href="www/specialite-{@id}.html" method="xml"
+				encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
+				doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+				<html xmlns="http://www.w3.org/1999/xhtml">
+					<xsl:call-template name="head">
+						<xsl:with-param name="title">
+							Master Informatique - Luminy
+						</xsl:with-param>
+					</xsl:call-template>
+					<body>
+						<xsl:call-template name="header">
+							<xsl:with-param name="title">
+								Master Informatique - Luminy
+							</xsl:with-param>
+						</xsl:call-template>
+						<xsl:call-template name="specialite" />
+					</body>
+				</html>
+			</xsl:document>
+		</xsl:for-each>
+
 		<!-- TOUS DOC PARCOURS -->
 		<xsl:for-each select="//parcours">
 			<xsl:document href="www/parcours-{@id}.html" method="xml"
@@ -239,7 +254,7 @@
 
 	<!-- TEMPLATE HEAD -->
 	<xsl:template name="head">
-		<xsl:param name="title"></xsl:param>
+		<xsl:param name="title" />
 		<head>
 			<title>
 				<xsl:value-of select="$title" />
@@ -269,7 +284,7 @@
 
 	<!-- TEMPLATE MENU AUTRES PAGES -->
 	<xsl:template name="header">
-		<xsl:param name="title"></xsl:param>
+		<xsl:param name="title" />
 		<p class="new">
 			<xsl:value-of select="$title" />
 		</p>
@@ -398,12 +413,8 @@
 		<ul>
 			<xsl:for-each select="//ref_ue[. = current()/@id]">
 				<li>
-					<a href="parcours-{@id}.html">
+					<a href="parcours-{ancestor::parcours/@id}.html">
 						<xsl:value-of select="ancestor::parcours/nom_parc" />
-						de
-						<b>
-							<xsl:value-of select="ancestor::master/nom_master" />
-						</b>
 					</a>
 				</li>
 			</xsl:for-each>
@@ -484,12 +495,7 @@
 			</xsl:call-template>
 
 		</div>
-		<div class="cadre">
-			<u>Débouchés:</u>
-			<xsl:call-template name="text_zone">
-				<xsl:with-param name="text" select="debouche" />
-			</xsl:call-template>
-		</div>
+
 		<div class="cadre">
 			<u>Intervenants:</u>
 			<ul>
@@ -515,6 +521,71 @@
 			<xsl:apply-templates select="lieu_parc" />
 		</div>
 	</xsl:template>
+
+
+	<!-- TEMPLATE SPECIALITE -->
+	<xsl:template name="specialite">
+		<h3>
+			<xsl:value-of select="nom_spe" />
+		</h3>
+
+		<div class="cadre">
+			<u>Responsables du parcours:</u>
+			<ul>
+				<xsl:for-each select="responsable">
+					<xsl:variable name="respon"
+						select="//intervenant[@id = current()/@ref]"/>
+					<li>
+						<a href="intervenant-{current()/@ref}.html">
+							<xsl:value-of select="$respon/nom_inter" />
+						</a>
+					</li>
+				</xsl:for-each>
+			</ul>
+		</div>
+		
+		<div class="cadre">
+			<u>Parcours:</u>
+			<ul>
+				<xsl:for-each select="ref_parcours">
+					<xsl:variable name="parc"
+						select="//parcours[@id = current()]"/>
+					<li>
+						<a href="parcours-{current()}.html">
+							<xsl:value-of select="$parc/nom_parc" />
+						</a>
+					</li>
+				</xsl:for-each>
+			</ul>
+		</div>
+		
+		
+		<div class="cadre">
+			<u>Description du parcours:</u>
+			<xsl:call-template name="text_zone">
+				<xsl:with-param name="text" select="description" />
+			</xsl:call-template>
+
+		</div>
+		<div class="cadre">
+			<u>Débouchés:</u>
+			<xsl:call-template name="text_zone">
+				<xsl:with-param name="text" select="debouche" />
+			</xsl:call-template>
+		</div>
+
+		<xsl:if test="finalite[ (normalize-space(.) != '') ]">
+			<div class="cadre">
+				<u>Finalité:</u>
+				<xsl:value-of select="finalite" />
+			</div>
+		</xsl:if>
+		<div class="cadre">
+			<u>Lieu d'enseignement:</u>
+			<xsl:apply-templates select="lieu_parc" />
+		</div>
+	</xsl:template>
+
 
 
 	<!-- TEMPLATE SEMESTRE -->

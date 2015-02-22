@@ -16,7 +16,7 @@ web: Site.xml Site.xsl
 	@echo "Dossier www/ généré"
 
 tidy:
-	tidy -utf8 -im -asxhtml www/*.html
+	tidy -utf8 -imqe -asxhtml www/*.html
 
 xq:
 

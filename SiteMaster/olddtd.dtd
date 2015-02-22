@@ -13,20 +13,23 @@
 
 
 <!-- Racine -->
-<!ELEMENT master_info (intervenants, master, unites)>
+<!ELEMENT master_info (intervenants, master+, unites)>
 
 <!-- Liste d'intervenants -->
 <!ELEMENT intervenants (intervenant+)>
-<!ELEMENT intervenant (idext, nom_inter, prenom_inter, mail, site?)>
+<!ELEMENT intervenant (nom_inter, mail, site)>
 <!ATTLIST intervenant %id;>
+    
+<!-- Master -->
+<!ELEMENT master (nom_master, specialite+)>
+<!ATTLIST master %id;>
 
 <!-- Spécialité -->
-<!ELEMENT master (specialite+, parcours+)>
-<!ELEMENT specialite (nom_spe, responsable+, ref_parcours+, description, debouche, finalite)>
+<!ELEMENT specialite (nom_spe, parcours+)>
 <!ATTLIST specialite %id;>
 
 <!-- Parcours -->
-<!ELEMENT parcours (nom_parc, semestre+, responsable*, description, ref_intervenant*, lieu_parc?)>
+<!ELEMENT parcours (nom_parc, semestre+, responsable+, description, debouche, ref_intervenant+, finalite?, lieu_parc)>
 <!ATTLIST parcours %id;>
 
 <!-- Semestre -->
@@ -36,19 +39,16 @@
 
 <!-- UE -->
 <!ELEMENT unites (ue+)>
-<!ELEMENT ue (nom_ue, nom_identificateur, nb_credits, ref_intervenant*, resume, plan?, lieu_ue+)>
+<!ELEMENT ue (nom_ue, nb_credits, ref_intervenant+, resume, plan?, lieu_ue+)>
 <!ATTLIST ue %id;>
 
 
 <!-- Feuilles -->
 <!ELEMENT nom_master     (#PCDATA)> 
-<!ELEMENT idext     (#PCDATA)>  
-<!ELEMENT nom_inter     (#PCDATA)>  
-<!ELEMENT prenom_inter     (#PCDATA)> 
+<!ELEMENT nom_inter     (#PCDATA)>   
 <!ELEMENT mail     (#PCDATA)>   
 <!ELEMENT site     (#PCDATA)>   
 <!ELEMENT nom_ue     (#PCDATA)> 
-<!ELEMENT nom_identificateur     (#PCDATA)>
 <!ELEMENT ref_ue     (#PCDATA)> 
 <!ELEMENT nb_credits     (#PCDATA)>
 <!ELEMENT resume     ANY>
@@ -78,18 +78,6 @@
 <!ATTLIST nom_bloc_ue
     %unite;
     >
-
+<!ELEMENT li     ANY>
 <!ELEMENT ul (li+)>
 <!ELEMENT ol (li+)>
-<!ELEMENT li	(t|b|i|u|br|ol|ul)* >
-<!ELEMENT p		(t|b|i|u|br|ol|ul)* >
-<!ELEMENT t		(#PCDATA) >
-<!ELEMENT b		(#PCDATA) >
-<!ELEMENT i		(#PCDATA) >
-<!ELEMENT u		(#PCDATA) >
-<!ELEMENT br		EMPTY >
-
-
-
-
-
