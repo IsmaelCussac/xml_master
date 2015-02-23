@@ -18,7 +18,7 @@
 							<li>
 								<a href="ue-{.}.html">
 									<xsl:value-of select="$ue/nom_ue" />
-								</a>
+								</a>&#160;
 								(
 								<xsl:value-of select="$ue/nb_credits" />
 								crédits)

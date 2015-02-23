@@ -7,13 +7,12 @@
 	<xsl:import href="utils-tmp.xsl" />
 
 	<xsl:template name="ue">
+
+		<h3>
+			<xsl:value-of select="nom_ue" />
+		</h3>
 		<p>
-			<b>
-				<xsl:value-of select="nom_ue" />
-			</b>
-		</p>
-		<p>
-			<b>Crédits:</b>
+			<b>Crédits:</b>&#160;
 			<xsl:value-of select="nb_credits" />
 		</p>
 
@@ -31,14 +30,14 @@
 			</ul>
 		</xsl:if>
 		<p>
-			<b>Description:</b>
+			<b>Description:</b>&#160;
 			<xsl:call-template name="text_zone">
 				<xsl:with-param name="text" select="resume" />
 			</xsl:call-template>
 		</p>
 		<xsl:if test="plan[ (normalize-space(.) != '') ]">
 			<p>
-				<b>Plan:</b>
+				<b>Plan:</b>&#160;
 				<xsl:value-of select="plan" />
 			</p>
 		</xsl:if>

@@ -9,7 +9,7 @@
 	<xsl:template name="intervenant">
 		<div class="cadre">
 			<p>
-				Intervenant:
+				Intervenant:&#160;
 				<b>
 					<xsl:value-of select="nom_inter" />
 					&#160;
@@ -17,14 +17,14 @@
 				</b>
 			</p>
 			<p>
-				Mail:
+				Mail:&#160;
 				<xsl:call-template name="mail">
 					<xsl:with-param name="email" select="./mail" />
 				</xsl:call-template>
 			</p>
 			<xsl:if test="site[ (normalize-space(.) != '') ]">
 				<p>
-					Site:
+					Site:&#160;
 					<xsl:call-template name="site">
 						<xsl:with-param name="site" select="./site" />
 					</xsl:call-template>

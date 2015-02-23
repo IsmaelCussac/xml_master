@@ -5,7 +5,7 @@ all: clean gen dtd web tidy
 
 gen: donnees-to-xml.xsl donnees-master.xml
 	$(XSLT) donnees-to-xml.xsl donnees-master.xml
-	@echo "Fichier de donnée xml construit"
+	@echo "Fichier de données xml construit"
 	
 dtd: master-gen.xml master-dtd.dtd
 	$(LINT) --valid  master-gen.xml

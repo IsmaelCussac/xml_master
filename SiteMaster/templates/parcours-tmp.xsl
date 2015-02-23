@@ -35,7 +35,7 @@
 		</xsl:if>
 
 		<div class="cadre">
-			<u>Description du parcours:</u>
+			<u>Description du parcours:</u>&#160;
 			<xsl:call-template name="text_zone">
 				<xsl:with-param name="text" select="description" />
 			</xsl:call-template>
@@ -66,7 +66,7 @@
 			</div>
 		</xsl:if>
 		<div class="cadre">
-			<u>Lieu d'enseignement:</u>
+			<u>Lieu d'enseignement:</u>&#160;
 			<xsl:apply-templates select="lieu_parc" />
 		</div>
 	</xsl:template>

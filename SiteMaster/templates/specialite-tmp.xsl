@@ -42,14 +42,14 @@
 
 
 		<div class="cadre">
-			<u>Description du parcours:</u>
+			<u>Description du parcours:</u>&#160;
 			<xsl:call-template name="text_zone">
 				<xsl:with-param name="text" select="description" />
 			</xsl:call-template>
 
 		</div>
 		<div class="cadre">
-			<u>Débouchés:</u>
+			<u>Débouchés:</u>&#160;
 			<xsl:call-template name="text_zone">
 				<xsl:with-param name="text" select="debouche" />
 			</xsl:call-template>
@@ -57,7 +57,7 @@
 
 		<xsl:if test="finalite[ (normalize-space(.) != '') ]">
 			<div class="cadre">
-				<u>Finalité:</u>
+				<u>Finalité:</u>&#160;
 				<xsl:if test="finalite='R'"> Recherche</xsl:if>
 				<xsl:if test="finalite='P'"> Professionnelle</xsl:if>
 			</div>

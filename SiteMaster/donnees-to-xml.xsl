@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<!-- Construit le fichier master-gen.xml à partir du fichier donnees-master.xml -->
+	<!-- Construit le fichier master-gen.xml à partir des fichiers donnees-master.xml et complement-donnees.xml -->
 
 	<xsl:variable name="objets" select="//objet" />
 	<xsl:variable name="intervenants" select="$objets[@type = 'personne']" />
