@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT elements (element+)>
+<!ELEMENT element (#PCDATA)>
+<!ATTLIST element ref NMTOKENS #REQUIRED>
+<!ATTLIST element type CDATA #REQUIRED>

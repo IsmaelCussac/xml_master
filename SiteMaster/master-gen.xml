@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!DOCTYPE master_info SYSTEM "Site.dtd">
+<!DOCTYPE master_info SYSTEM "master-dtd.dtd">
 <master_info>
   <intervenants>
     <intervenant id="IN10388">
@@ -13,6 +13,7 @@
       <nom_inter>HABET</nom_inter>
       <prenom_inter>Djamal</prenom_inter>
       <mail>djamal.habet@univ-amu.fr</mail>
+      <site>http://pageperso.lif.univ-mrs.fr/~djamal.habet/</site>
     </intervenant>
     <intervenant id="IN12316">
       <idext>demongodini</idext>
@@ -49,6 +50,7 @@
       <nom_inter>OLIVE</nom_inter>
       <prenom_inter>Frederic</prenom_inter>
       <mail>frederic.olive@univ-amu.fr</mail>
+      <site>http://pageperso.lif.univ-mrs.fr/~frederic.olive/</site>
     </intervenant>
     <intervenant id="IN14758">
       <idext>broche.m</idext>
@@ -86,12 +88,14 @@
       <nom_inter>GODARD</nom_inter>
       <prenom_inter>Emmanuel</prenom_inter>
       <mail>emmanuel.godard@univ-amu.fr</mail>
+      <site>http://pageperso.lif.univ-mrs.fr/~emmanuel.godard/</site>
     </intervenant>
     <intervenant id="IN3524">
       <idext>lugiez</idext>
       <nom_inter>LUGIEZ</nom_inter>
       <prenom_inter>Denis</prenom_inter>
       <mail>denis.lugiez@univ-amu.fr</mail>
+      <site>http://pageperso.lif.univ-mrs.fr/~denis.lugiez/</site>
     </intervenant>
     <intervenant id="IN616">
       <idext>agopian</idext>
@@ -146,6 +150,7 @@
       <nom_inter>MORIN</nom_inter>
       <prenom_inter>Remi</prenom_inter>
       <mail>remi.morin@univ-amu.fr</mail>
+      <site>http://pageperso.lif.univ-mrs.fr/~remi.morin/</site>
     </intervenant>
     <intervenant id="IN9941">
       <idext>bechet.f</idext>
@@ -434,6 +439,7 @@
           Maîtriser les notions fondamentales de l'informatique : principes de fonctionnement des machines, concepts d'organisation des données et algorithmique avancée, notions de réseaux et de systèmes, traduction et langages, information et systèmes distribués, méthodes de conception.
         
     </description>
+      <lieu_parc>Luminy et Saint-Jérome</lieu_parc>
     </parcours>
     <parcours id="PRSIN5A0">
       <nom_parc>M2 Spécialité Informatique fondamentale (IF)</nom_parc>
@@ -487,6 +493,7 @@
           Cette spécialité de master a pour vocation de former des diplômés en informatique capables d'occuper des postes d'enseignant- chercheur ou de chercheur, ou tout poste lié à la recherche dans les organismes de recherche publics ou privés.
         
     </description>
+      <lieu_parc>Luminy</lieu_parc>
     </parcours>
     <parcours id="PRSIN5B1">
       <nom_parc>M2 Spécialité Sciences de l'information et des systèmes, parcours Informatique</nom_parc>
@@ -552,6 +559,7 @@
           Les compétences relèvent des thématiques de recherche suivantes : Fondements Logiques et Algorithmiques ; Fondements de programmation par contraintes et satisfiabilité ; Représentation des connaissances : approfondissement et applications ; Planification, configuration et raisonnement temporel et spatial ; Agents et ontologies pour les systèmes d’information et le web sémantique ; Approches avancées de conception de systèmes d’information ; Extraction et intégration d'information du web ; Web services ; Aide à la décision ; Formalismes à événements discrets.
         
     </description>
+      <lieu_parc>Saint-Jérome</lieu_parc>
     </parcours>
     <parcours id="PRSIN5B2">
       <nom_parc>M2 Spécialité Sciences de l'information et des systèmes, parcours Image</nom_parc>
@@ -617,6 +625,7 @@
           Classification, apprentissage, décision ; Segmentation2 ; Modèles géométriques continus et discrets ; Imagerie Médicale ; Modélisation algorithmique, différentielle et discrète ; Analyse de vidéo et Reconnaissance de Forme ; Vision Industrielle ; Modèles pour la production d’images ; Traitement de données multimodales.
         
     </description>
+      <lieu_parc>Luminy</lieu_parc>
     </parcours>
     <parcours id="PRSIN5B3">
       <nom_parc>M2 Spécialité Sciences de l'information et des systèmes, parcours Systèmes</nom_parc>
@@ -682,6 +691,7 @@
           Commande et diagnostic des systèmes complexes ; Systèmes à structure variable et planification ; Génie électrique et mécatronique ; Pronostic des systèmes ; Procédés à énergie renouvelable ; Réseaux de neurones ; Conduite et gestion de la production ; Problématique et démarche de conception ; Modèles et Objets de conception ; Systèmes intelligents ; Traitement de données multimodales ; Formalismes à évènements discrets ; Simulation distribuée et modèles hétérogènes ; Aide à la décision.
         
     </description>
+      <lieu_parc>Saint-Jérome</lieu_parc>
     </parcours>
     <parcours id="PRSIN5C1">
       <nom_parc>M2 Spécialité Fiabilité, sécurité et intégration logicielle (FSIL), parcours Fiabilité et sécurité informatique (FSI)</nom_parc>
@@ -735,6 +745,7 @@
           
         
     </description>
+      <lieu_parc>Luminy</lieu_parc>
     </parcours>
     <parcours id="PRSIN5C2">
       <nom_parc>M2 Spécialité Fiabilité, sécurité et intégration logicielle (FSIL), parcours Intégration de systèmes logiciels (ISL)</nom_parc>
@@ -789,6 +800,7 @@
           
         
     </description>
+      <lieu_parc>Luminy</lieu_parc>
     </parcours>
     <parcours id="PRSIN5D0">
       <nom_parc>M2 Spécialité Génie logiciel (GL)</nom_parc>
@@ -820,6 +832,7 @@
           Le diplômé acquiers les compétences approfondies pour être capable d'intervenir dans toutes les phases du cycle de vie d'un logiciel à la fois au niveau de la conception et la spécification (patrons de conception, UML ...), des architectures et composants logiciels (JEE ...), des IHM, de la qualité logicielle, de la validation logiciels, des ateliers de génie logiciels et des technologies du Web. La gestion de projet est aussi aborder pour la maîtrise des grands projets informatiques.
         
     </description>
+      <lieu_parc>Saint-Jérome</lieu_parc>
     </parcours>
     <parcours id="PRSIN5E1">
       <nom_parc>M2 Spécialité Informatique décisionnelle (ID), parcours Fouille et entrepôts de données (FED)</nom_parc>
@@ -870,6 +883,7 @@
           
         
     </description>
+      <lieu_parc>Luminy</lieu_parc>
     </parcours>
     <parcours id="PRSIN5E2">
       <nom_parc>M2 Spécialité Informatique décisionnelle (ID), parcours Recherche opérationnelle (RO)</nom_parc>
@@ -921,6 +935,7 @@
           
         
     </description>
+      <lieu_parc>Luminy et Saint-Jérome</lieu_parc>
     </parcours>
     <parcours id="PRSIN5F0">
       <nom_parc>M2 Spécialité Recherche d'informations multimédia (RIM)</nom_parc>
@@ -964,6 +979,7 @@
           Les enseignements sont organisés selon deux axes : l'analyse et la représentation du contenu d'une part ; l'indexation et la recherche d'information d'autre part. L'analyse et le traitement du contenu désignent les traitements de fichiers texte, audio, image ou vidéo permettant d'obtenir une représentation structurée de leur contenu sous forme de descripteurs, du niveau signal au niveau sémantique. L'indexation consiste à utiliser ces descripteurs afin d'indexer finement chaque document pour procéder à son archivage de façon optimisée.
         
     </description>
+      <lieu_parc>Luminy</lieu_parc>
     </parcours>
     <parcours id="PRSIN5G0">
       <nom_parc>M2 Spécialité Systèmes d'information répartis (SIR)</nom_parc>
@@ -1008,6 +1024,7 @@
           
         
     </description>
+      <lieu_parc>Saint-Jérome</lieu_parc>
     </parcours>
   </master>
   <unites>
@@ -1028,7 +1045,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINAU10">
       <nom_ue>Modèles à évènements discrets</nom_ue>
@@ -1042,7 +1058,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINAU11">
       <nom_ue>Introduction à l'apprentissage automatique</nom_ue>
@@ -1062,7 +1077,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINAU2">
       <nom_ue>Complexité</nom_ue>
@@ -1082,7 +1096,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINAU3">
       <nom_ue>Réseaux</nom_ue>
@@ -1110,7 +1123,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINAU4">
       <nom_ue>Programmation fonctionnelle</nom_ue>
@@ -1144,7 +1156,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINAU5">
       <nom_ue>Programmation parallèle</nom_ue>
@@ -1160,7 +1171,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINAU6">
       <nom_ue>Programmation logique</nom_ue>
@@ -1178,7 +1188,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINAU7">
       <nom_ue>Outils de l'internet</nom_ue>
@@ -1200,7 +1209,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINAU8">
       <nom_ue>Système embarqué</nom_ue>
@@ -1208,7 +1216,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINAU9">
       <nom_ue>Fondamentaux pour l'ingénierie des langues</nom_ue>
@@ -1224,7 +1231,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU1">
       <nom_ue>Anglais</nom_ue>
@@ -1236,7 +1242,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU10">
       <nom_ue>Intégration des systèmes d'information</nom_ue>
@@ -1254,7 +1259,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU11">
       <nom_ue>Initiation à la fouille de données et à l’optimisation des SGBD</nom_ue>
@@ -1269,7 +1273,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU12">
       <nom_ue>Intelligence artificielle</nom_ue>
@@ -1291,7 +1294,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU13">
       <nom_ue>Algorithme à performance garantie</nom_ue>
@@ -1311,7 +1313,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU14">
       <nom_ue>Pratique de la cryptographie</nom_ue>
@@ -1326,7 +1327,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU2">
       <nom_ue>Communication</nom_ue>
@@ -1374,7 +1374,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU3">
       <nom_ue>Bases de données avancées</nom_ue>
@@ -1390,7 +1389,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU4">
       <nom_ue>XML</nom_ue>
@@ -1406,7 +1404,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU5">
       <nom_ue>Algorithmique et recherche opérationnelle</nom_ue>
@@ -1426,7 +1423,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU6">
       <nom_ue>Projet</nom_ue>
@@ -1438,7 +1434,6 @@
         
     </resume>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU7">
       <nom_ue>Stage de deux mois</nom_ue>
@@ -1450,7 +1445,6 @@
         
     </resume>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU8">
       <nom_ue>Sémantique</nom_ue>
@@ -1480,7 +1474,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINBU9">
       <nom_ue>Algorithmique distribuée</nom_ue>
@@ -1493,7 +1486,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU1">
       <nom_ue>Algorithmique et complexité</nom_ue>
@@ -1505,7 +1497,6 @@
         
     </resume>
       <plan>40</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU10">
       <nom_ue>Fouille de données avancée</nom_ue>
@@ -1517,7 +1508,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU11">
       <nom_ue>Géométrie discrète</nom_ue>
@@ -1529,7 +1519,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU12">
       <nom_ue>Algorithmique des graphes et réseaux</nom_ue>
@@ -1541,7 +1530,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU13">
       <nom_ue>Espaces métriques : structure et algorithmiques</nom_ue>
@@ -1553,7 +1541,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU14">
       <nom_ue>Optimisation combinatoire et programmation en nombres entiers</nom_ue>
@@ -1565,7 +1552,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU15">
       <nom_ue>Logiques et jeux</nom_ue>
@@ -1577,7 +1563,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU16">
       <nom_ue>Algorithmique distribuée 2</nom_ue>
@@ -1589,7 +1574,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU17">
       <nom_ue>Vérification et sécurité</nom_ue>
@@ -1601,7 +1585,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU18">
       <nom_ue>Modèles du parallélisme</nom_ue>
@@ -1613,7 +1596,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU19">
       <nom_ue>Modèles et connaissances linguistiques pour le TAL</nom_ue>
@@ -1625,7 +1607,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU2">
       <nom_ue>Logique, automates et aspects formels de la théorie des langages</nom_ue>
@@ -1640,7 +1621,6 @@
         
     </resume>
       <plan>40</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU20">
       <nom_ue>Syntaxe et sémantique : modèles et outils</nom_ue>
@@ -1652,7 +1632,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU21">
       <nom_ue>Modèles numériques pour le TAL</nom_ue>
@@ -1664,7 +1643,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU22">
       <nom_ue>Applications du Traitement Automatique de la Langue (TAL)</nom_ue>
@@ -1676,7 +1654,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU23">
       <nom_ue>Algorithmique des chaînes de caractères</nom_ue>
@@ -1688,7 +1665,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU24">
       <nom_ue>Classification et phylogénie</nom_ue>
@@ -1700,7 +1676,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU25">
       <nom_ue>Modèles markoviens</nom_ue>
@@ -1712,7 +1687,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU26">
       <nom_ue>Logiques non-standards</nom_ue>
@@ -1724,7 +1698,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU27">
       <nom_ue>Anglais 2</nom_ue>
@@ -1736,7 +1709,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU28">
       <nom_ue>Communication 2</nom_ue>
@@ -1772,7 +1744,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU29">
       <nom_ue>Fiabilité logicielle 1</nom_ue>
@@ -1784,7 +1755,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU3">
       <nom_ue>Statistique inférentielle</nom_ue>
@@ -1796,7 +1766,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU30">
       <nom_ue>Plateforme JEE</nom_ue>
@@ -1809,7 +1778,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU31">
       <nom_ue>Systèmes hétérogènes</nom_ue>
@@ -1845,7 +1813,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU32">
       <nom_ue>Sécurité internet et réseau</nom_ue>
@@ -1867,7 +1834,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU33">
       <nom_ue>Fiabilité logicielle 2</nom_ue>
@@ -1879,7 +1845,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU34">
       <nom_ue>Qualité</nom_ue>
@@ -1937,7 +1902,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU35">
       <nom_ue>Sécurité des systèmes embarqués</nom_ue>
@@ -1949,7 +1913,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU36">
       <nom_ue>Administration système et réseau</nom_ue>
@@ -1961,7 +1924,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU37">
       <nom_ue>Méthodes de développement</nom_ue>
@@ -1985,7 +1947,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU38">
       <nom_ue>Architecture logicielle</nom_ue>
@@ -1997,7 +1958,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU39">
       <nom_ue>Intégration des données</nom_ue>
@@ -2009,7 +1969,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU4">
       <nom_ue>Nouveaux défis en apprentissage</nom_ue>
@@ -2021,7 +1980,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU40">
       <nom_ue>Administration et alimentation de BD</nom_ue>
@@ -2033,7 +1991,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU41">
       <nom_ue>Qualité logicielle : outils et méthodes</nom_ue>
@@ -2045,7 +2002,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU42">
       <nom_ue>Spécification logicielle</nom_ue>
@@ -2057,7 +2013,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU43">
       <nom_ue>Conception logicielle et IHM</nom_ue>
@@ -2069,7 +2024,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU44">
       <nom_ue>Architecture logicielle JEE</nom_ue>
@@ -2081,7 +2035,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU45">
       <nom_ue>Technologies du Web et Web 2.0</nom_ue>
@@ -2093,7 +2046,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU46">
       <nom_ue>XML avancé</nom_ue>
@@ -2105,7 +2057,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU47">
       <nom_ue>Gestion de projet</nom_ue>
@@ -2117,7 +2068,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU48">
       <nom_ue>Optimisation linéaire</nom_ue>
@@ -2138,7 +2088,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU49">
       <nom_ue>Fouille de Bases de Données (FBD)</nom_ue>
@@ -2146,7 +2095,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU5">
       <nom_ue>Théorie de l'apprentissage</nom_ue>
@@ -2158,7 +2106,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU50">
       <nom_ue>Méthodologie de conception d'applications décisionnelles</nom_ue>
@@ -2182,7 +2129,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU51">
       <nom_ue>Entrepôt de Données</nom_ue>
@@ -2215,7 +2161,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU52">
       <nom_ue>Fouille de Données Avancée</nom_ue>
@@ -2236,7 +2181,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU53">
       <nom_ue>Modélisation en RO</nom_ue>
@@ -2260,7 +2204,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU54">
       <nom_ue>Recherche locale</nom_ue>
@@ -2287,7 +2230,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU55">
       <nom_ue>Programmation en Nombres Entiers</nom_ue>
@@ -2314,7 +2256,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU56">
       <nom_ue>Traitement automatique de la parole</nom_ue>
@@ -2326,7 +2267,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU57">
       <nom_ue>Indexation et recherche d'images et vidéos</nom_ue>
@@ -2338,7 +2278,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU58">
       <nom_ue>Apprentissage automatique et classification</nom_ue>
@@ -2350,7 +2289,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU59">
       <nom_ue>Traitement et indexation des données multimédia</nom_ue>
@@ -2362,7 +2300,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU6">
       <nom_ue>Inférence grammaticale</nom_ue>
@@ -2374,7 +2311,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU60">
       <nom_ue>Architecture d'applications réparties sur le Web</nom_ue>
@@ -2386,7 +2322,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU61">
       <nom_ue>Services Web et Business Process</nom_ue>
@@ -2404,7 +2339,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU62">
       <nom_ue>Web Multimédia</nom_ue>
@@ -2416,7 +2350,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU63">
       <nom_ue>Processus d'entreprise - ERP</nom_ue>
@@ -2434,7 +2367,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU64">
       <nom_ue>Applications mobiles et réseaux sociaux</nom_ue>
@@ -2452,7 +2384,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU65">
       <nom_ue>Gestion de projet</nom_ue>
@@ -2464,7 +2395,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU66">
       <nom_ue>Nouvelles applications du Traitement Automatique de la Langue (TAL)</nom_ue>
@@ -2479,7 +2409,6 @@
         
     </resume>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU67">
       <nom_ue>Projet d'entreprise</nom_ue>
@@ -2492,7 +2421,6 @@
         
     </resume>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU7">
       <nom_ue>Apprentissage numérique</nom_ue>
@@ -2504,7 +2432,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU8">
       <nom_ue>Fouille de bases de données</nom_ue>
@@ -2516,7 +2443,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINCU9">
       <nom_ue>Entrepôts de données</nom_ue>
@@ -2528,7 +2454,6 @@
         
     </resume>
       <plan>20</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINDU1">
       <nom_ue>Communication scientifique</nom_ue>
@@ -2540,7 +2465,6 @@
         
     </resume>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINDU2">
       <nom_ue>Initiation à la recherche</nom_ue>
@@ -2548,7 +2472,6 @@
       <nb_credits>27</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINDU3">
       <nom_ue>Projet industriel de mise en application</nom_ue>
@@ -2560,7 +2483,6 @@
         
     </resume>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSINDU4">
       <nom_ue>Stage en entreprise</nom_ue>
@@ -2572,7 +2494,6 @@
         
     </resume>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU1">
       <nom_ue>AU4 : Classification, apprentissage et décision</nom_ue>
@@ -2584,7 +2505,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU2">
       <nom_ue>IM8 : Segmentation 2</nom_ue>
@@ -2596,7 +2516,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU20">
       <nom_ue>RTC : Concepts et fondamentaux de la modélisation</nom_ue>
@@ -2608,7 +2527,6 @@
         
     </resume>
       <plan>40</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU21">
       <nom_ue>RI1 : Fondements logiques et algorithmiques</nom_ue>
@@ -2620,7 +2538,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU22">
       <nom_ue>RI2 : Fondements de programmation et de satisfiabilité</nom_ue>
@@ -2632,7 +2549,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU23">
       <nom_ue>RI3 : Représentation des connaissances : Approfondissement et applications</nom_ue>
@@ -2644,7 +2560,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU24">
       <nom_ue>RI4 : Planification, configuration et raisonnement temporel et spatial</nom_ue>
@@ -2652,7 +2567,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU25">
       <nom_ue>RI5 : Agents et ontologies pour les systèmes d'information et le web sémantique</nom_ue>
@@ -2660,7 +2574,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU26">
       <nom_ue>RI6 : Approches avancées de conception de systèmes d'information</nom_ue>
@@ -2668,7 +2581,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU27">
       <nom_ue>RI7 : Extraction et intégration d'information du web</nom_ue>
@@ -2676,7 +2588,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU28">
       <nom_ue>RI8 : Web services</nom_ue>
@@ -2684,7 +2595,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU29">
       <nom_ue>RIS1 : Traitement de données multimodales</nom_ue>
@@ -2692,7 +2602,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU3">
       <nom_ue>IM6 : Animation et simulation physique</nom_ue>
@@ -2700,7 +2609,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU30">
       <nom_ue>RIS2 : Formalises à éléments discrets</nom_ue>
@@ -2708,7 +2616,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU31">
       <nom_ue>RIS3 : Simulation distribuée et modèles hétérogènes</nom_ue>
@@ -2716,7 +2623,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU32">
       <nom_ue>RIS4 : Aide à la décision</nom_ue>
@@ -2724,7 +2630,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU33">
       <nom_ue>R2 : Communication et interaction homme-machine</nom_ue>
@@ -2732,7 +2637,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU34">
       <nom_ue>RE1 : Problématique, démarche, modèles et objects de conception</nom_ue>
@@ -2740,7 +2644,6 @@
       <nb_credits>6</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU35">
       <nom_ue>RE2 : Modèles et objets de conception</nom_ue>
@@ -2748,7 +2651,6 @@
       <nb_credits>6</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU36">
       <nom_ue>RE3 : Systèmes intelligents</nom_ue>
@@ -2756,7 +2658,6 @@
       <nb_credits>6</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU37">
       <nom_ue>RE4 : Conception et architecture</nom_ue>
@@ -2764,7 +2665,6 @@
       <nb_credits>6</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU38">
       <nom_ue>RO1 : Une UE extérieure de 3 crédits (validation requise)</nom_ue>
@@ -2772,7 +2672,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU39">
       <nom_ue>RO2 : Une UE extérieure de 6 crédits (validation requise)</nom_ue>
@@ -2780,7 +2679,6 @@
       <nb_credits>6</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU4">
       <nom_ue>IM10 : Imagerie médicale</nom_ue>
@@ -2792,7 +2690,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU40">
       <nom_ue>RS1 : Commande et diagnostic des systèmes complexes</nom_ue>
@@ -2800,7 +2697,6 @@
       <nb_credits>6</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU41">
       <nom_ue>RS2 : Systèmes à structure variable et planification</nom_ue>
@@ -2808,7 +2704,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU42">
       <nom_ue>RS3 : Génie électrique et mécatronique</nom_ue>
@@ -2816,7 +2711,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU43">
       <nom_ue>RS4 : Pronostic des systèmes</nom_ue>
@@ -2824,7 +2718,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU44">
       <nom_ue>RS5 : Procédés à énergie renouvelable</nom_ue>
@@ -2832,7 +2725,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU45">
       <nom_ue>RS6 : Réseaux de neurones</nom_ue>
@@ -2840,7 +2732,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU46">
       <nom_ue>RS7 : Conduite et gestion de la production</nom_ue>
@@ -2848,7 +2739,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU5">
       <nom_ue>IM11 : Modélisation algorithmique, différentielle et discrète</nom_ue>
@@ -2860,7 +2750,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU55">
       <nom_ue>IM15 : Modèles pour la production d'images, traitement et visualisation de données géométriques à haute-performance</nom_ue>
@@ -2868,7 +2757,6 @@
       <nb_credits>3</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU6">
       <nom_ue>IM12 : Analyse de vidéo et reconnaissance de forme</nom_ue>
@@ -2880,7 +2768,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU7">
       <nom_ue>IM13 : Vision industrielle</nom_ue>
@@ -2892,7 +2779,6 @@
         
     </resume>
       <plan>30</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISCU8">
       <nom_ue>IM14 : Modèles pour la production d'images : CAO et jeux vidéo</nom_ue>
@@ -2910,7 +2796,6 @@
         
     </resume>
       <plan>60</plan>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISDU3">
       <nom_ue>R bib : Étude bibliographique</nom_ue>
@@ -2918,7 +2803,6 @@
       <nb_credits>6</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
     <ue id="ENSISDU4">
       <nom_ue>Stage de recherche</nom_ue>
@@ -2926,7 +2810,6 @@
       <nb_credits>24</nb_credits>
       <resume/>
       <plan/>
-      <lieu_ue/>
     </ue>
   </unites>
 </master_info>

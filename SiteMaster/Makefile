@@ -1,18 +1,22 @@
 XSLT = xsltproc
 LINT = xmllint --noout
 
-all: clean dtd xsd web tidy xq java
+all: clean gen dtd web tidy 
 
-dtd: Site.xml Site.dtd
-	$(LINT) --valid  Site.xml
+gen: donnees-to-xml.xsl donnees-master.xml
+	$(XSLT) donnees-to-xml.xsl donnees-master.xml
+	@echo "Fichier de donnée xml construit"
+	
+dtd: master-gen.xml master-dtd.dtd
+	$(LINT) --valid  master-gen.xml
 	@echo "dtd valide"
 
-xsd: Site.xml Site_dtd.xsd
-	$(LINT) --schema  Site_dtd.xsd Site.xml
+xsd: master-gen.xml master-schema.xsd
+	$(LINT) --schema  master-schema.xsd master-gen.xml
 	@echo "xsd valide"
 
-web: Site.xml Site.xsl
-	$(XSLT) Site.xsl Site.xml
+web: master-gen.xml master-stylesheet.xsl
+	$(XSLT) master-stylesheet.xsl master-gen.xml
 	@echo "Dossier www/ généré"
 
 tidy:
@@ -23,6 +27,7 @@ xq:
 java:
 
 clean:
+	@rm -rf master-gen.xml
 	@rm -rf www/
-	@rm *~
+
 

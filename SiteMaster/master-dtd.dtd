@@ -36,12 +36,13 @@
 
 <!-- UE -->
 <!ELEMENT unites (ue+)>
-<!ELEMENT ue (nom_ue, nom_identificateur, nb_credits, ref_intervenant*, resume, plan?, lieu_ue+)>
+<!ELEMENT ue (nom_ue, nom_identificateur, nb_credits, ref_intervenant*, resume, plan?, lieu_ue?)>
 <!ATTLIST ue %id;>
 
 
 <!-- Feuilles -->
 <!ELEMENT nom_master     (#PCDATA)> 
+<!ELEMENT ref_parcours     (#PCDATA)> 
 <!ELEMENT idext     (#PCDATA)>  
 <!ELEMENT nom_inter     (#PCDATA)>  
 <!ELEMENT prenom_inter     (#PCDATA)> 
