@@ -2,6 +2,7 @@
 
 <!-- Entités -->
 <!ENTITY % id "id ID #IMPLIED">
+<!ENTITY % ref "ref IDREF #IMPLIED">
 <!ENTITY  %  site
              "site (Luminy|Saint-Jérome|Luminy_Saint-Jérome) #IMPLIED">
 <!ENTITY dom.amu "univ-amu.fr">
@@ -17,7 +18,7 @@
 
 <!-- Liste d'intervenants -->
 <!ELEMENT intervenants (intervenant+)>
-<!ELEMENT intervenant (idext, nom_inter, prenom_inter, mail, site?)>
+<!ELEMENT intervenant (idext, nom_inter, prenom_inter, mail?, site?)>
 <!ATTLIST intervenant %id;>
 
 <!-- Spécialité -->
@@ -41,7 +42,7 @@
 
 
 <!-- Feuilles -->
-<!ELEMENT nom_master     (#PCDATA)> 
+
 <!ELEMENT ref_parcours     (#PCDATA)> 
 <!ELEMENT idext     (#PCDATA)>  
 <!ELEMENT nom_inter     (#PCDATA)>  
@@ -66,7 +67,8 @@
 <!ELEMENT debouche     ANY>
 <!ELEMENT responsable     (#PCDATA)>
 <!ATTLIST  responsable  
-	ref  IDREF  #REQUIRED>
+	%ref;
+	>
 <!ELEMENT finalite     (#PCDATA)>            
 <!ATTLIST finalite
     %final;
@@ -82,8 +84,8 @@
 
 <!ELEMENT ul (li+)>
 <!ELEMENT ol (li+)>
-<!ELEMENT li	(t|b|i|u|br|ol|ul)* >
-<!ELEMENT p		(t|b|i|u|br|ol|ul)* >
+<!ELEMENT li	(#PCDATA|t|b|i|u|br|ol|ul)* >
+<!ELEMENT p		(#PCDATA|t|b|i|u|br|ol|ul)* >
 <!ELEMENT t		(#PCDATA) >
 <!ELEMENT b		(#PCDATA) >
 <!ELEMENT i		(#PCDATA) >

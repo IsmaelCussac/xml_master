@@ -2,9 +2,11 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<!-- Construit le fichier master-gen.xml à partir des fichiers donnees-master.xml et complement-donnees.xml -->
+	<!-- Construit le fichier master-gen.xml à partir des fichiers donnees-master.xml 
+		et complement-donnees.xml -->
 
 	<xsl:variable name="objets" select="//objet" />
+	
 	<xsl:variable name="intervenants" select="$objets[@type = 'personne']" />
 	<xsl:variable name="unites" select="$objets[@type = 'enseignement']" />
 	<xsl:variable name="parcours" select="$objets[@type = 'programme']" />
@@ -12,8 +14,9 @@
 	<xsl:variable name="semestres" select="$objets[@type = 'semestre']" />
 	<xsl:variable name="groupes" select="$objets[@type = 'groupe']" />
 	<xsl:variable name="options" select="$objets[@type = 'option']" />
-	
-	<xsl:variable name="complement" select="document('complement-donnees.xml')/elements" />
+
+	<xsl:variable name="complement"
+		select="document('complement-donnees.xml')/elements" />
 
 
 	<xsl:template match="/">
@@ -40,10 +43,11 @@
 							<mail>
 								<xsl:value-of select="info[@nom='mail']/@value" />
 							</mail>
-							<xsl:if test="$complement//element[@ref=current()/@id and @type='site']">
+							<xsl:if
+								test="$complement//element[@ref=current()/@id and @type='site']">
 								<site>
 									<xsl:copy-of
-									select="$complement//element[@ref=current()/@id and @type='site']/text()"/>
+										select="$complement//element[@ref=current()/@id and @type='site']/text()" />
 								</site>
 							</xsl:if>
 						</intervenant>
@@ -162,8 +166,11 @@
 								<xsl:value-of select="current()/info[@nom='competences']" />
 							</description>
 							<lieu_parc>
+								<xsl:attribute name="site"> 
+										<xsl:value-of select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()" />
+									</xsl:attribute>
 								<xsl:copy-of
-									select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()"/>
+									select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()" />
 							</lieu_parc>
 						</parcours>
 					</xsl:for-each>

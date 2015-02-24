@@ -5,7 +5,7 @@
 	<xsl:import href="utils-tmp.xsl" />
 
 	<!-- TEMPLATE INTERVENANT -->
-	
+
 	<xsl:template name="intervenant">
 		<div class="cadre">
 			<p>
@@ -16,12 +16,14 @@
 					<xsl:value-of select="prenom_inter" />
 				</b>
 			</p>
-			<p>
-				Mail:&#160;
-				<xsl:call-template name="mail">
-					<xsl:with-param name="email" select="./mail" />
-				</xsl:call-template>
-			</p>
+			<xsl:if test="mail[ (normalize-space(.) != '') ]">
+				<p>
+					Mail:&#160;
+					<xsl:call-template name="mail">
+						<xsl:with-param name="email" select="./mail" />
+					</xsl:call-template>
+				</p>
+			</xsl:if>
 			<xsl:if test="site[ (normalize-space(.) != '') ]">
 				<p>
 					Site:&#160;

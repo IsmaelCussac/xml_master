@@ -10,7 +10,7 @@
 	<element ref="IN9224" type="site">http://pageperso.lif.univ-mrs.fr/~remi.morin/</element>
 	
 	
-	<element ref="PRSIN4T0" type="lieu_parc">Luminy et Saint-Jérome</element>
+	<element ref="PRSIN4T0" type="lieu_parc">Luminy_Saint-Jérome</element>
 	<element ref="PRSIN5A0" type="lieu_parc">Luminy</element>
 	<element ref="PRSIN5B1" type="lieu_parc">Saint-Jérome</element>
 	<element ref="PRSIN5B2" type="lieu_parc">Luminy</element>
@@ -19,7 +19,7 @@
 	<element ref="PRSIN5C2" type="lieu_parc">Luminy</element>
 	<element ref="PRSIN5D0" type="lieu_parc">Saint-Jérome</element>
 	<element ref="PRSIN5E1" type="lieu_parc">Luminy</element>
-	<element ref="PRSIN5E2" type="lieu_parc">Luminy et Saint-Jérome</element>
+	<element ref="PRSIN5E2" type="lieu_parc">Luminy</element>
 	<element ref="PRSIN5F0" type="lieu_parc">Luminy</element>
 	<element ref="PRSIN5G0" type="lieu_parc">Saint-Jérome</element>
 
