@@ -4,7 +4,7 @@
 <!ENTITY % id "id ID #IMPLIED">
 <!ENTITY  %  site
              "site (Luminy|Saint-Jérome|Luminy_Saint-Jérome) #IMPLIED">
-<!ENTITY dom.amu "@univ-amu.fr">
+<!ENTITY dom.amu "univ-amu.fr">
 <!ENTITY url.lif "http://pageperso.lif.univ-mrs.fr/~">
 <!ENTITY  %  unite
              "unite (Obligatoire|Option|Bonus) #IMPLIED">            
@@ -26,7 +26,7 @@
 <!ATTLIST specialite %id;>
 
 <!-- Parcours -->
-<!ELEMENT parcours (nom_parc, semestre+, responsable*, description, ref_intervenant*, lieu_parc?)>
+<!ELEMENT parcours (nom_parc, semestre+, responsable*, description, ref_intervenant*, lieu_parc)>
 <!ATTLIST parcours %id;>
 
 <!-- Semestre -->

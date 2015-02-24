@@ -13,7 +13,7 @@
 	<xsl:variable name="groupes" select="$objets[@type = 'groupe']" />
 	<xsl:variable name="options" select="$objets[@type = 'option']" />
 	
-	<xsl:variable name="complement" select="document('complement-donnees.xml')" />
+	<xsl:variable name="complement" select="document('complement-donnees.xml')/elements" />
 
 
 	<xsl:template match="/">
@@ -40,10 +40,10 @@
 							<mail>
 								<xsl:value-of select="info[@nom='mail']/@value" />
 							</mail>
-							<xsl:if test="$complement/elements//element[@ref=current()/@id and @type='site']">
+							<xsl:if test="$complement//element[@ref=current()/@id and @type='site']">
 								<site>
 									<xsl:copy-of
-									select="$complement/elements//element[@ref=current()/@id and @type='site']/text()"/>
+									select="$complement//element[@ref=current()/@id and @type='site']/text()"/>
 								</site>
 							</xsl:if>
 						</intervenant>
@@ -163,7 +163,7 @@
 							</description>
 							<lieu_parc>
 								<xsl:copy-of
-									select="$complement/elements//element[@ref=current()/@id and @type='lieu_parc']/text()"/>
+									select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()"/>
 							</lieu_parc>
 						</parcours>
 					</xsl:for-each>
@@ -172,7 +172,6 @@
 				<!-- Liste des unités -->
 				<unites>
 					<xsl:for-each select="$unites">
-						<xsl:variable name="unite" select="$complement//ue" />
 						<ue>
 							<xsl:attribute name="id">
 								<xsl:value-of select="./@id" />

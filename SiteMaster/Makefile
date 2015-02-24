@@ -1,7 +1,7 @@
 XSLT = xsltproc
 LINT = xmllint --noout
 
-all: clean gen dtd web tidy 
+all: clean gen dtd xsd web tidy 
 
 gen: donnees-to-xml.xsl donnees-master.xml
 	$(XSLT) donnees-to-xml.xsl donnees-master.xml
