@@ -22,7 +22,8 @@
 	<xsl:template match="/">
 		<xsl:document href="master-gen.xml" method="xml" indent="yes"
 			doctype-system="master-dtd.dtd">
-			<master_info>
+			<master_info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:noNamespaceSchemaLocation="master-schema.xsd">
 
 				<!-- Liste des intervenants -->
 				<intervenants>
@@ -49,6 +50,7 @@
 									<xsl:copy-of
 										select="$complement//element[@ref=current()/@id and @type='site']/text()" />
 								</site>
+								
 							</xsl:if>
 						</intervenant>
 					</xsl:for-each>

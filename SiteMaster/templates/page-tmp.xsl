@@ -27,6 +27,9 @@
 				<li>
 					<a href="masters.html">Masters</a>
 				</li>
+				<li>
+					<a href="xq.html">Question XQuery</a>
+				</li>
 			</ul>
 		</div>
 	</xsl:template>

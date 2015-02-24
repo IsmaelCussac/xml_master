@@ -29,6 +29,7 @@
 			</xs:simpleType>
 		</xs:attribute>
 	</xs:attributeGroup>
+	
 	<xs:attributeGroup name="final">
 		<xs:attribute name="final">
 			<xs:simpleType>
@@ -69,6 +70,7 @@
 				<xs:element ref="prenom_inter" />
 				<xs:element ref="mail" />
 				<xs:element minOccurs="0" ref="site" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="info_comp"/>
 			</xs:sequence>
 			<xs:attributeGroup ref="id" />
 		</xs:complexType>
@@ -155,6 +157,7 @@
 				<xs:element ref="resume" />
 				<xs:element minOccurs="0" ref="plan" />
 				<xs:element minOccurs="0" ref="lieu_ue" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="info_comp"/>
 			</xs:sequence>
 			<xs:attributeGroup ref="id" />
 		</xs:complexType>
@@ -324,4 +327,10 @@
 			<xs:any minOccurs="0" maxOccurs="unbounded" processContents="strict" />
 		</xs:sequence>
 	</xs:complexType>
+	
+	<xs:element name="info_comp">
+		<xs:complexType mixed="true">
+			<xs:attribute name="type" />
+		</xs:complexType>
+	</xs:element>
 </xs:schema>

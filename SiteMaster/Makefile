@@ -1,7 +1,7 @@
 XSLT = xsltproc
 LINT = xmllint --noout
 
-all: clean gen dtd xsd web tidy xq java
+all: clean gen  xsd web tidy xq java
 
 gen: donnees-to-xml.xsl donnees-master.xml
 	@echo "\nConstruction du fichier de données XML"
@@ -25,6 +25,8 @@ tidy:
 	tidy -utf8 -imqe -asxhtml www/*.html
 
 xq:
+	@echo "\nCréation de la requête XQuery"
+	java -cp saxon9he.jar net.sf.saxon.Query !indent=yes xq.txt > www/xq.html
 
 java:
 

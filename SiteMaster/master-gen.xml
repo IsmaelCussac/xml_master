@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE master_info SYSTEM "master-dtd.dtd">
-<master_info>
+<master_info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="master-schema.xsd">
   <intervenants>
     <intervenant id="IN10388">
       <idext>favre.b</idext>

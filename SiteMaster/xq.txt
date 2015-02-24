@@ -1,0 +1,88 @@
+declare function local:main() {
+
+	let $doc := doc('master-gen.xml')//intervenant
+	
+  	for $i in $doc
+  	order by $i/nom_inter
+  	return local:intervenant($i)
+};
+ 
+declare function local:intervenant($inter) {
+	
+	<div class="cadre">
+		<b>{$inter/nom_inter} {$inter/prenom_inter}</b><br/>
+		<u>Enseignements</u>
+		<ul>{local:unites($inter)}</ul>
+		<u>Parcours</u>
+		<ul>{local:parcours($inter)}</ul>
+	 </div>
+	
+};
+ 
+declare function local:unites($inter) {
+
+	let $ue := doc('master-gen.xml')//ue[./ref_intervenant = $inter/@id],
+		$count := count($ue)
+	return
+	
+    if($count != 0) then
+		for $u in $ue
+		order by $u/nom_ue
+		return <li><a href="ue-{$u/@id}.html">{$u/nom_ue}</a></li>
+		
+    else
+		<p>Aucun</p>
+};
+ 
+declare function local:parcours($inter) {
+
+	let $parc := doc('master-gen.xml')//parcours[./responsable/@ref = $inter/@id],
+		$count := count($parc)
+	return
+	
+	if($count != 0) then
+		for $p in $parc
+		order by $p/nom_parc
+		return <li><a href="parcours-{$p/@id}.html">{$p/nom_parc}</a></li>
+		
+   	else 
+   		<p>Aucun</p>
+};
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+						Master Informatique - Luminy
+					</title>
+    <link rel="stylesheet" href="../style.css" type="test/css" />
+  </head>
+  <body>
+  	<p xmlns="" class="new">
+								Master Informatique - Luminy
+							</p>
+    <div xmlns="" class="cadre">
+      <b>--- Menu ---</b>
+      <ul>
+        <li>
+          <a href="index.html">Accueil</a>
+        </li>
+        <li>
+          <a href="intervenants.html">Intervenants</a>
+        </li>
+        <li>
+          <a href="unites.html">Unités</a>
+        </li>
+      </ul>
+    </div>
+    
+    <p>
+    	{local:main()}
+    </p>
+    
+    
+    
+  
+  </body>
+</html>
+  
