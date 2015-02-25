@@ -29,10 +29,15 @@ xq:
 	java -cp saxon9he.jar net.sf.saxon.Query !indent=yes xq.txt > www/xq.html
 
 java:
+	@echo "\nCréation du fichier DOM"
+	javac CreateDOM.java
+	java CreateDOM > dom.txt
 
 clean:
 	@echo "\nSuppression"
 	rm -rf master-gen.xml
 	rm -rf www/
+	rm -rf dom.txt
+	rm -rf *.class
 
 

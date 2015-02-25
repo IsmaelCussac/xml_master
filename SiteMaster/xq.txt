@@ -22,28 +22,28 @@ declare function local:intervenant($inter) {
 declare function local:unites($inter) {
 
 	let $ue := doc('master-gen.xml')//ue[./ref_intervenant = $inter/@id],
-		$count := count($ue)
+		$cmp := count($ue)
 	return
 	
-    if($count != 0) then
-		for $u in $ue
-		order by $u/nom_ue
-		return <li><a href="ue-{$u/@id}.html">{$u/nom_ue}</a></li>
+	if($cmp != 0) then
+		for $i in $ue
+		order by $i/nom_ue
+		return <li><a href="ue-{$i/@id}.html">{$i/nom_ue}</a></li>
 		
-    else
+	else
 		<p>Aucun</p>
 };
  
 declare function local:parcours($inter) {
 
 	let $parc := doc('master-gen.xml')//parcours[./responsable/@ref = $inter/@id],
-		$count := count($parc)
+		$cmp := count($parc)
 	return
 	
-	if($count != 0) then
-		for $p in $parc
-		order by $p/nom_parc
-		return <li><a href="parcours-{$p/@id}.html">{$p/nom_parc}</a></li>
+	if($cmp != 0) then
+		for $i in $parc
+		order by $i/nom_parc
+		return <li><a href="parcours-{$i/@id}.html">{$i/nom_parc}</a></li>
 		
    	else 
    		<p>Aucun</p>
