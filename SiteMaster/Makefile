@@ -30,8 +30,8 @@ xq:
 
 java:
 	@echo "\nCréation du fichier DOM"
-	javac CreateDOM.java
-	java CreateDOM > dom.txt
+	javac CreateDom.java
+	java CreateDom > dom.txt
 
 clean:
 	@echo "\nSuppression"
