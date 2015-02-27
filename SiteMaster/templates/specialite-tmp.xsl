@@ -12,7 +12,7 @@
 		</h3>
 
 		<div class="cadre">
-			<u>Responsables du parcours:</u>
+			<b>Responsables du parcours:</b>
 			<ul>
 				<xsl:for-each select="responsable">
 					<xsl:variable name="respon"
@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="cadre">
-			<u>Parcours:</u>
+			<b>Parcours:</b>
 			<ul>
 				<xsl:for-each select="ref_parcours">
 					<xsl:variable name="parc" select="//parcours[@id = current()]" />
@@ -42,14 +42,14 @@
 
 
 		<div class="cadre">
-			<u>Description du parcours:</u>&#160;
+			<b>Description du parcours:</b>&#160;
 			<xsl:call-template name="text_zone">
 				<xsl:with-param name="text" select="description" />
 			</xsl:call-template>
 
 		</div>
 		<div class="cadre">
-			<u>Débouchés:</u>&#160;
+			<b>Débouchés:</b>&#160;
 			<xsl:call-template name="text_zone">
 				<xsl:with-param name="text" select="debouche" />
 			</xsl:call-template>
@@ -57,7 +57,7 @@
 
 		<xsl:if test="finalite[ (normalize-space(.) != '') ]">
 			<div class="cadre">
-				<u>Finalité:</u>&#160;
+				<b>Finalité:</b>&#160;
 				<xsl:if test="finalite='R'"> Recherche</xsl:if>
 				<xsl:if test="finalite='P'"> Professionnelle</xsl:if>
 			</div>

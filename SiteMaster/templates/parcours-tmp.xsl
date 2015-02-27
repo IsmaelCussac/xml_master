@@ -27,7 +27,7 @@
 
 		<xsl:if test="$respons != '' ">
 			<div class="cadre">
-				<u>Responsables du parcours:</u>
+				<b>Responsables du parcours:</b>
 				<ul>
 					<xsl:copy-of select="$respons" />
 				</ul>
@@ -35,7 +35,7 @@
 		</xsl:if>
 
 		<div class="cadre">
-			<u>Description du parcours:</u>&#160;
+			<b>Description du parcours:</b>&#160;
 			<xsl:call-template name="text_zone">
 				<xsl:with-param name="text" select="description" />
 			</xsl:call-template>
@@ -59,14 +59,14 @@
 		</xsl:variable>
 		<xsl:if test="$inter != '' ">
 			<div class="cadre">
-				<u>Intervenants:</u>
+				<b>Intervenants:</b>
 				<ul>
 					<xsl:copy-of select="$inter" />
 				</ul>
 			</div>
 		</xsl:if>
 		<div class="cadre">
-			<u>Lieu d'enseignement:</u>&#160;
+			<b>Lieu d'enseignement:</b>&#160;
 			<xsl:apply-templates select="lieu_parc" />
 		</div>
 	</xsl:template>

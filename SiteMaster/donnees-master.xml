@@ -4732,7 +4732,6 @@
     <info nom="mail" value="djamal.habet@univ-amu.fr"/>
     <info nom="nom" value="HABET"/>
     <info nom="prenom" value="Djamal"/>
-    <!-- <info nom="site" value="http://pageperso.lif.univ-mrs.fr/~djamal.habet/"/> -->
   </objet>
   <objet id="IN12316" type="personne">
     <info nom="idext" value="demongodini"/>
@@ -4769,7 +4768,6 @@
     <info nom="mail" value="frederic.olive@univ-amu.fr"/>
     <info nom="nom" value="OLIVE"/>
     <info nom="prenom" value="Frederic"/>
-    <!-- <info nom="site" value="http://pageperso.lif.univ-mrs.fr/~frederic.olive/"/> -->
   </objet>
   <objet id="IN14758" type="personne">
     <info nom="idext" value="broche.m"/>
@@ -4799,21 +4797,18 @@
     <info nom="mail" value="jean-luc.massat@univ-amu.fr"/>
     <info nom="nom" value="MASSAT"/>
     <info nom="prenom" value="Jean Luc"/>
-   <!--  <info nom="site" value="http://www.dil.univ-mrs.fr/~massat/copie/index.html"/>--> 
   </objet>
   <objet id="IN2563" type="personne">
     <info nom="idext" value="godard"/>
     <info nom="mail" value="emmanuel.godard@univ-amu.fr"/>
     <info nom="nom" value="GODARD"/>
     <info nom="prenom" value="Emmanuel"/>
-   <!--   <info nom="site" value="http://pageperso.lif.univ-mrs.fr/~emmanuel.godard/"/>-->
   </objet>
   <objet id="IN3524" type="personne">
     <info nom="idext" value="lugiez"/>
     <info nom="mail" value="denis.lugiez@univ-amu.fr"/>
     <info nom="nom" value="LUGIEZ"/>
     <info nom="prenom" value="Denis"/>
-   <!--   <info nom="site" value="http://pageperso.lif.univ-mrs.fr/~denis.lugiez/"/>-->
   </objet>
   <objet id="IN616" type="personne">
     <info nom="idext" value="agopian"/>
@@ -4868,7 +4863,6 @@
     <info nom="mail" value="remi.morin@univ-amu.fr"/>
     <info nom="nom" value="MORIN"/>
     <info nom="prenom" value="Remi"/>
-   <!--  <info nom="site" value="http://pageperso.lif.univ-mrs.fr/~remi.morin/"/> -->
   </objet>
   <objet id="IN9941" type="personne">
     <info nom="idext" value="bechet.f"/>

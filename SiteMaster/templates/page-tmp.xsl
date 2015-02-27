@@ -9,7 +9,7 @@
 			<title>
 				<xsl:value-of select="$title" />
 			</title>
-			<link rel="stylesheet" href="../style.css" type="test/css" />
+			<link rel="stylesheet" type="text/css" href="../style.css" />
 		</head>
 	</xsl:template>
 

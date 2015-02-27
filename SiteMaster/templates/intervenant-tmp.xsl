@@ -9,7 +9,7 @@
 	<xsl:template name="intervenant">
 		<div class="cadre">
 			<p>
-				Intervenant:&#160;
+				<b>Intervenant:&#160;</b>
 				<b>
 					<xsl:value-of select="nom_inter" />
 					&#160;
@@ -18,7 +18,7 @@
 			</p>
 			<xsl:if test="mail[ (normalize-space(.) != '') ]">
 				<p>
-					Mail:&#160;
+					<b>Mail:&#160;</b>
 					<xsl:call-template name="mail">
 						<xsl:with-param name="email" select="./mail" />
 					</xsl:call-template>
@@ -26,14 +26,14 @@
 			</xsl:if>
 			<xsl:if test="site[ (normalize-space(.) != '') ]">
 				<p>
-					Site:&#160;
+					<b>Site:&#160;</b>
 					<xsl:call-template name="site">
 						<xsl:with-param name="site" select="./site" />
 					</xsl:call-template>
 				</p>
 			</xsl:if>
 			<xsl:if test="//ue[ref_intervenant = current()/@id]">
-				UEs enseignées:
+				<b>UEs enseignées:</b>
 				<ul>
 					<xsl:for-each select="//ue[ref_intervenant = current()/@id]">
 						<li>
@@ -45,7 +45,7 @@
 				</ul>
 			</xsl:if>
 			<xsl:if test="//parcours[responsable/@ref = current()/@id]">
-				Responsable des parcours:
+				<b>Responsable des parcours:</b>
 				<ul>
 					<xsl:for-each select="//parcours[responsable/@ref = current()/@id]">
 						<li>

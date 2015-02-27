@@ -42,7 +42,7 @@
 			</p>
 		</xsl:if>
 
-		Enseigné dans les parcours suivants:
+		<b>Enseigné dans les parcours suivants:</b>
 		<ul>
 			<xsl:for-each select="//ref_ue[. = current()/@id]">
 				<li>

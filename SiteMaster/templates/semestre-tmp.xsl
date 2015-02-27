@@ -6,7 +6,11 @@
 
 	<xsl:template name="semestre">
 		<div class="cadre">
-			<xsl:value-of select="nom_sem" />
+			<b>
+				<u>
+					<xsl:value-of select="nom_sem" />
+				</u>
+			</b><br/><br/>
 			<div>
 				<xsl:for-each select="bloc_ue">
 					<b>
@@ -18,7 +22,8 @@
 							<li>
 								<a href="ue-{.}.html">
 									<xsl:value-of select="$ue/nom_ue" />
-								</a>&#160;
+								</a>
+								&#160;
 								(
 								<xsl:value-of select="$ue/nb_credits" />
 								crédits)
