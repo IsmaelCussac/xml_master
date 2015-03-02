@@ -85,10 +85,10 @@
 								</ref_parcours>
 							</xsl:for-each>
 							<description>
-								<xsl:value-of select="current()/info[@nom = 'connaissances']" />
+								<xsl:copy-of select="current()/info[@nom = 'connaissances']/*" />
 							</description>
 							<debouche>
-								<xsl:value-of select="current()/info[@nom = 'debouches']" />
+								<xsl:copy-of select="current()/info[@nom = 'debouches']/*" />
 							</debouche>
 							<finalite>
 								<xsl:value-of select="current()/info[@nom = 'finalite']/@value" />
@@ -165,7 +165,7 @@
 								</responsable>
 							</xsl:for-each>
 							<description>
-								<xsl:value-of select="current()/info[@nom='competences']" />
+								<xsl:copy-of select="current()/info[@nom='competences']/*" />
 							</description>
 							<lieu_parc>
 								<xsl:attribute name="site"> 
@@ -201,7 +201,7 @@
 							</xsl:for-each>
 
 							<resume>
-								<xsl:value-of select="info[@nom='contenu']" />
+								<xsl:copy-of select="info[@nom='contenu']/*" />
 							</resume>
 							<plan>
 								<xsl:value-of select="info[@nom='vol_global']/@value" />

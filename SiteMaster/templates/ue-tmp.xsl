@@ -12,7 +12,8 @@
 			<xsl:value-of select="nom_ue" />
 		</h3>
 		<p>
-			<b>Crédits:</b>&#160;
+			<b>Crédits:</b>
+			&#160;
 			<xsl:value-of select="nb_credits" />
 		</p>
 
@@ -29,15 +30,15 @@
 				</xsl:for-each>
 			</ul>
 		</xsl:if>
-		<p>
-			<b>Description:</b>&#160;
-			<xsl:call-template name="text_zone">
-				<xsl:with-param name="text" select="resume" />
-			</xsl:call-template>
-		</p>
+		<div class="cadre">
+			<b>Description:</b>
+			&#160;
+			<xsl:copy-of select="resume/*" />
+		</div>
 		<xsl:if test="plan[ (normalize-space(.) != '') ]">
 			<p>
-				<b>Plan:</b>&#160;
+				<b>Plan:</b>
+				&#160;
 				<xsl:value-of select="plan" />
 			</p>
 		</xsl:if>

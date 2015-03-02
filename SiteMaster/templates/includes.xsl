@@ -8,5 +8,6 @@
 	<xsl:include href="ue-tmp.xsl" />
 	<xsl:include href="intervenant-tmp.xsl" />
 	<xsl:include href="page-tmp.xsl" />
+	<xsl:include href="utils-tmp.xsl" />
 
 </xsl:stylesheet>

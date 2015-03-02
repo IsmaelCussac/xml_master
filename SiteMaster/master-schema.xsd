@@ -29,7 +29,7 @@
 			</xs:simpleType>
 		</xs:attribute>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="final">
 		<xs:attribute name="final">
 			<xs:simpleType>
@@ -70,7 +70,7 @@
 				<xs:element ref="prenom_inter" />
 				<xs:element ref="mail" />
 				<xs:element minOccurs="0" ref="site" />
-				<xs:element minOccurs="0" maxOccurs="unbounded" ref="info_comp"/>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="info_comp" />
 			</xs:sequence>
 			<xs:attributeGroup ref="id" />
 		</xs:complexType>
@@ -86,7 +86,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="specialite">
 		<xs:complexType>
 			<xs:sequence>
@@ -127,7 +127,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="bloc_ue">
 		<xs:complexType>
 			<xs:sequence>
@@ -146,7 +146,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="ue">
 		<xs:complexType>
 			<xs:sequence>
@@ -157,7 +157,7 @@
 				<xs:element ref="resume" />
 				<xs:element minOccurs="0" ref="plan" />
 				<xs:element minOccurs="0" ref="lieu_ue" />
-				<xs:element minOccurs="0" maxOccurs="unbounded" ref="info_comp"/>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="info_comp" />
 			</xs:sequence>
 			<xs:attributeGroup ref="id" />
 		</xs:complexType>
@@ -169,7 +169,7 @@
 	<xs:element name="idext" type="xs:string" />
 	<xs:element name="nom_inter" type="xs:string" />
 	<xs:element name="prenom_inter" type="xs:string" />
-	
+
 	<xs:element name="mail">
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
@@ -179,7 +179,7 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	
+
 	<xs:element name="site">
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
@@ -189,11 +189,11 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	
+
 	<xs:element name="nom_ue" type="xs:string" />
 	<xs:element name="nom_identificateur" type="xs:string" />
 	<xs:element name="ref_ue" type="xs:string" />
-	
+
 	<xs:element name="nb_credits">
 		<xs:simpleType>
 			<xs:restriction base="xs:decimal">
@@ -202,58 +202,77 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	
+
 	<xs:element name="resume">
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:whiteSpace value="preserve" />
-			</xs:restriction>
-		</xs:simpleType>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="p" />
+				<xs:element ref="t" />
+				<xs:element ref="b" />
+				<xs:element ref="i" />
+				<xs:element ref="u" />
+				<xs:element ref="br" />
+				<xs:element ref="ol" />
+				<xs:element ref="ul" />
+			</xs:choice>
+		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="plan" type="xs:string" />
-	
+
 	<xs:element name="lieu_ue">
 		<xs:complexType>
 			<xs:attribute name="lieu" type="site" />
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="nom_sem" type="xs:string" />
 	<xs:element name="ref_intervenant" type="xs:string" />
 	<xs:element name="nom_spe" type="xs:string" />
 	<xs:element name="nom_parc" type="xs:string" />
-	
+
 	<xs:element name="description">
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:whiteSpace value="preserve" />
-				<xs:minLength value="15"/>
-			</xs:restriction>
-		</xs:simpleType>
+	<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="p" />
+				<xs:element ref="t" />
+				<xs:element ref="b" />
+				<xs:element ref="i" />
+				<xs:element ref="u" />
+				<xs:element ref="br" />
+				<xs:element ref="ol" />
+				<xs:element ref="ul" />
+			</xs:choice>
+		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="debouche">
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:whiteSpace value="preserve" />
-				<xs:minLength value="15"/>
-			</xs:restriction>
-		</xs:simpleType>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="p" />
+				<xs:element ref="t" />
+				<xs:element ref="b" />
+				<xs:element ref="i" />
+				<xs:element ref="u" />
+				<xs:element ref="br" />
+				<xs:element ref="ol" />
+				<xs:element ref="ul" />
+			</xs:choice>
+		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="responsable">
 		<xs:complexType mixed="true">
 			<xs:attributeGroup ref="ref" />
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="finalite">
 		<xs:complexType mixed="true">
 			<xs:attributeGroup ref="final" />
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="lieu_parc">
 		<xs:complexType>
 			<xs:simpleContent>
@@ -263,7 +282,7 @@
 			</xs:simpleContent>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="nom_bloc_ue">
 		<xs:complexType mixed="true">
 			<xs:attributeGroup ref="unite" />
@@ -277,7 +296,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="ol">
 		<xs:complexType>
 			<xs:sequence>
@@ -285,7 +304,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="li">
 		<xs:complexType>
 			<xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -299,7 +318,7 @@
 			</xs:choice>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="p">
 		<xs:complexType>
 			<xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -313,7 +332,7 @@
 			</xs:choice>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="t" type="xs:string" />
 	<xs:element name="b" type="xs:string" />
 	<xs:element name="i" type="xs:string" />
@@ -321,13 +340,20 @@
 	<xs:element name="br">
 		<xs:complexType />
 	</xs:element>
-	
+
 	<xs:complexType name="any" mixed="true">
-		<xs:sequence>
-			<xs:any minOccurs="0" maxOccurs="unbounded" processContents="strict" />
-		</xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="p" />
+				<xs:element ref="t" />
+				<xs:element ref="b" />
+				<xs:element ref="i" />
+				<xs:element ref="u" />
+				<xs:element ref="br" />
+				<xs:element ref="ol" />
+				<xs:element ref="ul" />
+			</xs:choice>
 	</xs:complexType>
-	
+
 	<xs:element name="info_comp">
 		<xs:complexType mixed="true">
 			<xs:attribute name="type" />
