@@ -15,8 +15,6 @@
 
 <!-- Racine -->
 <!ELEMENT master_info (intervenants, master, unites)>
-<!ATTLIST master_info xmlns:xsi CDATA #IMPLIED>
-<!ATTLIST master_info xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
 
 <!-- Liste d'intervenants -->
 <!ELEMENT intervenants (intervenant+)>
@@ -86,9 +84,8 @@
 
 <!ELEMENT ul (li+)>
 <!ELEMENT ol (li+)>
-<!ELEMENT li	(#PCDATA|t|b|i|u|br|ol|ul)* >
-<!ELEMENT p		(#PCDATA|t|b|i|u|br|ol|ul)* >
-<!ELEMENT t		(#PCDATA) >
+<!ELEMENT li	(#PCDATA|b|i|u|br|ol|ul)* >
+<!ELEMENT p		(#PCDATA|b|i|u|br|ol|ul)* >
 <!ELEMENT b		(#PCDATA) >
 <!ELEMENT i		(#PCDATA) >
 <!ELEMENT u		(#PCDATA) >

@@ -1,7 +1,7 @@
 XSLT = xsltproc
 LINT = xmllint --noout
 
-all: clean gen xsd web tidy xq java
+all: clean gen dtd xsd web tidy xq java
 
 gen: donnees-to-xml.xsl donnees-master.xml
 	@echo "\nConstruction du fichier de données XML"

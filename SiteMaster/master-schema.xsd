@@ -204,7 +204,7 @@
 	</xs:element>
 
 	<xs:element name="resume">
-		<xs:complexType>
+		<xs:complexType mixed="true">
 			<xs:choice minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="p" />
 				<xs:element ref="t" />
@@ -232,7 +232,7 @@
 	<xs:element name="nom_parc" type="xs:string" />
 
 	<xs:element name="description">
-	<xs:complexType>
+	<xs:complexType mixed="true">
 			<xs:choice minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="p" />
 				<xs:element ref="t" />
@@ -247,7 +247,7 @@
 	</xs:element>
 
 	<xs:element name="debouche">
-		<xs:complexType>
+		<xs:complexType mixed="true">
 			<xs:choice minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="p" />
 				<xs:element ref="t" />
@@ -306,7 +306,7 @@
 	</xs:element>
 
 	<xs:element name="li">
-		<xs:complexType>
+		<xs:complexType mixed="true">
 			<xs:choice minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="t" />
 				<xs:element ref="b" />
@@ -320,7 +320,7 @@
 	</xs:element>
 
 	<xs:element name="p">
-		<xs:complexType>
+		<xs:complexType mixed="true">
 			<xs:choice minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="t" />
 				<xs:element ref="b" />
@@ -359,4 +359,6 @@
 			<xs:attribute name="type" />
 		</xs:complexType>
 	</xs:element>
+	
+	<xs:element name="text" type="xs:string"/>
 </xs:schema>

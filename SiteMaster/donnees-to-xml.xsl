@@ -6,7 +6,7 @@
 		et complement-donnees.xml -->
 
 	<xsl:variable name="objets" select="//objet" />
-	
+
 	<xsl:variable name="intervenants" select="$objets[@type = 'personne']" />
 	<xsl:variable name="unites" select="$objets[@type = 'enseignement']" />
 	<xsl:variable name="parcours" select="$objets[@type = 'programme']" />
@@ -22,8 +22,7 @@
 	<xsl:template match="/">
 		<xsl:document href="master-gen.xml" method="xml" indent="yes"
 			doctype-system="master-dtd.dtd">
-			<master_info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-				xsi:noNamespaceSchemaLocation="master-schema.xsd">
+			<master_info >
 
 				<!-- Liste des intervenants -->
 				<intervenants>
@@ -50,7 +49,7 @@
 									<xsl:copy-of
 										select="$complement//element[@ref=current()/@id and @type='site']/text()" />
 								</site>
-								
+
 							</xsl:if>
 						</intervenant>
 					</xsl:for-each>
@@ -85,10 +84,16 @@
 								</ref_parcours>
 							</xsl:for-each>
 							<description>
-								<xsl:copy-of select="current()/info[@nom = 'connaissances']/*" />
+								<xsl:call-template name="text_zone">
+									<xsl:with-param name="text"
+										select="current()/info[@nom = 'connaissances']" />
+								</xsl:call-template>
 							</description>
 							<debouche>
-								<xsl:copy-of select="current()/info[@nom = 'debouches']/*" />
+								<xsl:call-template name="text_zone">
+									<xsl:with-param name="text"
+										select="current()/info[@nom = 'debouches']" />
+								</xsl:call-template>
 							</debouche>
 							<finalite>
 								<xsl:value-of select="current()/info[@nom = 'finalite']/@value" />
@@ -109,7 +114,7 @@
 								<semestre>
 									<nom_sem>
 										<xsl:value-of
-											select="$semestres[@id=current()/@value]/info[@nom='nom']/@value" />
+										select="$semestres[@id=current()/@value]/info[@nom='nom']/@value" />
 									</nom_sem>
 									<xsl:variable name="sem"
 										select="$semestres[@id = current()/@value]" />
@@ -165,14 +170,19 @@
 								</responsable>
 							</xsl:for-each>
 							<description>
-								<xsl:copy-of select="current()/info[@nom='competences']/*" />
+								<xsl:call-template name="text_zone">
+									<xsl:with-param name="text"
+										select="current()/info[@nom='competences']" />
+								</xsl:call-template>
+
 							</description>
 							<lieu_parc>
 								<xsl:attribute name="site"> 
-										<xsl:value-of select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()" />
+										<xsl:value-of
+								select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()" />
 									</xsl:attribute>
 								<xsl:copy-of
-									select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()" />
+								select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()" />
 							</lieu_parc>
 						</parcours>
 					</xsl:for-each>
@@ -199,9 +209,10 @@
 									<xsl:value-of select="./@value" />
 								</ref_intervenant>
 							</xsl:for-each>
-
 							<resume>
-								<xsl:copy-of select="info[@nom='contenu']/*" />
+								<xsl:call-template name="text_zone">
+									<xsl:with-param name="text" select="info[@nom='contenu']" />
+								</xsl:call-template>
 							</resume>
 							<plan>
 								<xsl:value-of select="info[@nom='vol_global']/@value" />
@@ -212,4 +223,58 @@
 			</master_info>
 		</xsl:document>
 	</xsl:template>
+
+	<xsl:template name="text_zone">
+		<xsl:param name="text" />
+		<xsl:apply-templates select="$text/*" />
+
+	</xsl:template>
+
+	<xsl:template match="p">
+		<p>
+			<xsl:apply-templates select="./*" />
+		</p>
+
+	</xsl:template>
+	<xsl:template match="b">
+		<b>
+			<xsl:value-of select="." />
+		</b>
+
+	</xsl:template>
+	<xsl:template match="i">
+		<i>
+			<xsl:value-of select="." />
+		</i>
+
+	</xsl:template>
+	<xsl:template match="u">
+		<u>
+			<xsl:value-of select="." />
+		</u>
+
+	</xsl:template>
+	<xsl:template match="ol">
+		<ol>
+			<xsl:apply-templates select="./*" />
+		</ol>
+
+	</xsl:template>
+	<xsl:template match="ul">
+		<ul>
+			<xsl:apply-templates select="./*" />
+		</ul>
+
+	</xsl:template>
+	<xsl:template match="li">
+		<li>
+			<xsl:value-of select="./*" />
+		</li>
+
+	</xsl:template>
+
+	<xsl:template match="t">
+		<xsl:value-of select="." />
+	</xsl:template>
+
 </xsl:stylesheet>
