@@ -30,6 +30,9 @@
 				<li>
 					<a href="xq.html">Question XQuery</a>
 				</li>
+				<li>
+					<a href="../dom.txt">Question Java arbre DOM</a>
+				</li>
 			</ul>
 		</div>
 	</xsl:template>

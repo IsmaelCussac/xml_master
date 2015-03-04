@@ -11,8 +11,8 @@
 
 		<!-- DOC INDEX -->
 		<xsl:document href="www/index.html" method="xml"
-				encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
-				doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+			encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
+			doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 			<html xmlns="http://www.w3.org/1999/xhtml">
 				<xsl:call-template name="head">
 					<xsl:with-param name="title">
@@ -50,8 +50,8 @@
 
 		<!-- DOC LISTE INTERVENANTS -->
 		<xsl:document href="www/intervenants.html" method="xml"
-				encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
-				doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+			encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
+			doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 			<html xmlns="http://www.w3.org/1999/xhtml">
 				<xsl:call-template name="head">
 					<xsl:with-param name="title">
@@ -108,8 +108,8 @@
 
 		<!-- DOC LISTE UNITES -->
 		<xsl:document href="www/unites.html" method="xml"
-				encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
-				doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+			encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
+			doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 			<html xmlns="http://www.w3.org/1999/xhtml">
 				<xsl:call-template name="head">
 					<xsl:with-param name="title">
@@ -165,8 +165,8 @@
 
 		<!-- DOC LISTE MASTERS -->
 		<xsl:document href="www/masters.html" method="xml"
-				encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
-				doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+			encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
+			doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 			<html xmlns="http://www.w3.org/1999/xhtml">
 				<xsl:call-template name="head">
 					<xsl:with-param name="title">
@@ -181,19 +181,16 @@
 					</xsl:call-template>
 					<div class="cadre">
 						<b>Liste des masters:</b>
-						<xsl:for-each select="//master">
-							<xsl:sort select="nom_master" />
-							<ul>
-								<xsl:for-each select="./specialite">
-									<xsl:sort select="nom_spe" />
-									<li>
-										<a href="specialite-{@id}.html">
-											<xsl:value-of select="nom_spe" />
-										</a>
-									</li>
-								</xsl:for-each>
-							</ul>
-						</xsl:for-each>
+						<ul>
+							<xsl:for-each select="//specialite">
+								<xsl:sort select="nom_spe" />
+								<li>
+									<a href="specialite-{@id}.html">
+										<xsl:value-of select="nom_spe" />
+									</a>
+								</li>
+							</xsl:for-each>
+						</ul>
 					</div>
 				</body>
 			</html>

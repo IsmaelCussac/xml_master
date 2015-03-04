@@ -16,7 +16,7 @@ public class CreateDom {
 
 	public static void main(String[] args) throws Exception {
 
-		File xmlFile = new File("../SiteMaster/master-gen.xml");
+		File xmlFile = new File("master-gen.xml");
 
 		Document docXml = DocumentBuilderFactory.newInstance()
 				.newDocumentBuilder().parse(xmlFile);
