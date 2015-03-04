@@ -39,22 +39,18 @@
 			</xsl:for-each>
 		</ul>
 
-
-
+		<b>Description de la spécialité:</b>
 		<div class="cadre">
-			<b>Description de la spécialité:</b>
-			&#160;
 			<xsl:copy-of select="description/*" />
-
 		</div>
+		<br />
+		<b>Débouchés:</b>
 		<div class="cadre">
-			<b>Débouchés:</b>
-			&#160;
 			<xsl:copy-of select="debouche/*" />
 		</div>
 
 		<xsl:if test="finalite[ (normalize-space(.) != '') ]">
-
+			<br />
 			<b>Finalité:</b>
 			&#160;
 			<xsl:if test="finalite='R'">
@@ -65,5 +61,6 @@
 			</xsl:if>
 
 		</xsl:if>
+		<br/><br/><br/>
 	</xsl:template>
 </xsl:stylesheet>

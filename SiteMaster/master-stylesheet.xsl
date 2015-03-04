@@ -20,7 +20,11 @@
 					</xsl:with-param>
 				</xsl:call-template>
 				<body>
-					<p class="new">Master Informatique - Luminy</p>
+					<p class="new">
+						<img src="http://www.latp.univ-mrs.fr/~richard/mi3s/logo-sciences.png"
+							alt="Logo" class="title" />
+						Master Informatique - Luminy
+					</p>
 					<h3>Bienvenue sur la page du Master Informatique de Luminy</h3>
 					<p>
 						Vous y trouverez toutes les informations concernant les parcours
@@ -64,7 +68,7 @@
 							Master Informatique - Luminy
 						</xsl:with-param>
 					</xsl:call-template>
-					<div class="cadre">
+					<div class="liste">
 						<b>Liste des intervenants:</b>
 						<ul>
 							<xsl:for-each select="//intervenant">
@@ -122,7 +126,7 @@
 							Master Informatique - Luminy
 						</xsl:with-param>
 					</xsl:call-template>
-					<div class="cadre">
+					<div class="liste">
 						<b>Liste des unités d'enseignement:</b>
 						<ul>
 							<xsl:for-each select="//ue">
@@ -179,7 +183,7 @@
 							Master Informatique - Luminy
 						</xsl:with-param>
 					</xsl:call-template>
-					<div class="cadre">
+					<div class="liste">
 						<b>Liste des masters:</b>
 						<ul>
 							<xsl:for-each select="//specialite">

@@ -30,12 +30,13 @@
 				</xsl:for-each>
 			</ul>
 		</xsl:if>
+
+		<b>Description:</b>
 		<div class="cadre">
-			<b>Description:</b>
-			&#160;
 			<xsl:copy-of select="resume/*" />
 		</div>
 		<xsl:if test="plan[ (normalize-space(.) != '') ]">
+			<br />
 			<p>
 				<b>Plan:</b>
 				&#160;

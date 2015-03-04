@@ -15,25 +15,13 @@
 
 	<!-- TEMPLATE MENU PRINCIPAL -->
 	<xsl:template name="menu">
-		<div class="cadre">
-			<b>--- Menu ---</b>
-			<ul>
-				<li>
-					<a href="intervenants.html">Intervenants</a>
-				</li>
-				<li>
-					<a href="unites.html">Unités</a>
-				</li>
-				<li>
-					<a href="masters.html">Masters</a>
-				</li>
-				<li>
-					<a href="xq.html">Question XQuery</a>
-				</li>
-				<li>
-					<a href="../dom.txt">Question Java arbre DOM</a>
-				</li>
-			</ul>
+		<div class="leftFrame menu">
+			<b>Menu</b>
+			<a href="intervenants.html" class="menu1">Intervenants</a>
+			<a href="unites.html" class="menu2">Unités</a>
+			<a href="masters.html" class="menu1">Masters</a>
+			<a href="xq.html" class="menu2">Question XQuery</a>
+			<a href="../dom.txt" class="menu1">Question Java arbre DOM</a>
 		</div>
 	</xsl:template>
 
@@ -42,21 +30,15 @@
 	<xsl:template name="header">
 		<xsl:param name="title" />
 		<p class="new">
+			<img src="http://www.latp.univ-mrs.fr/~richard/mi3s/logo-sciences.png"
+				alt="Logo" class="title" />
 			<xsl:value-of select="$title" />
 		</p>
-		<div class="cadre">
-			<b>--- Menu ---</b>
-			<ul>
-				<li>
-					<a href="index.html">Accueil</a>
-				</li>
-				<li>
-					<a href="intervenants.html">Intervenants</a>
-				</li>
-				<li>
-					<a href="unites.html">Unités</a>
-				</li>
-			</ul>
+		<div class="leftFrame menu">
+			<b>Menu</b>
+			<a href="index.html" class="menu1">Accueil</a>
+			<a href="intervenants.html" class="menu2">Intervenants</a>
+			<a href="unites.html" class="menu1">Unités</a>
 		</div>
 	</xsl:template>
 

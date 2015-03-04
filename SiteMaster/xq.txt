@@ -61,20 +61,12 @@ declare function local:parcours($inter) {
   	<p xmlns="" class="new">
 								Master Informatique - Luminy
 							</p>
-    <div xmlns="" class="cadre">
-      <b>--- Menu ---</b>
-      <ul>
-        <li>
-          <a href="index.html">Accueil</a>
-        </li>
-        <li>
-          <a href="intervenants.html">Intervenants</a>
-        </li>
-        <li>
-          <a href="unites.html">Unités</a>
-        </li>
-      </ul>
-    </div>
+    <div class="leftFrame menu">
+			<b>Menu</b>
+			<a href="index.html" class="menu1">Accueil</a>
+			<a href="intervenants.html" class="menu2">Intervenants</a>
+			<a href="unites.html" class="menu1">Unités</a>
+		</div>
     
     <p>
     	{local:main()}
