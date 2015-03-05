@@ -12,7 +12,7 @@
 		</h3>
 
 
-		<b>Responsables de la spécialité:</b>
+		<b>Responsables de la spécialité</b>
 		<ul>
 			<xsl:for-each select="responsable">
 				<xsl:variable name="respon"
@@ -27,7 +27,7 @@
 
 
 
-		<b>Parcours:</b>
+		<b>Parcours</b>
 		<ul>
 			<xsl:for-each select="ref_parcours">
 				<xsl:variable name="parc" select="//parcours[@id = current()]" />
@@ -39,12 +39,12 @@
 			</xsl:for-each>
 		</ul>
 
-		<b>Description de la spécialité:</b>
+		<b>Description de la spécialité</b>
 		<div class="cadre">
 			<xsl:copy-of select="description/*" />
 		</div>
 		<br />
-		<b>Débouchés:</b>
+		<b>Débouchés</b>
 		<div class="cadre">
 			<xsl:copy-of select="debouche/*" />
 		</div>
