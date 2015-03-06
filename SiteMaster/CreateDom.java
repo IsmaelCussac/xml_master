@@ -18,14 +18,14 @@ public class CreateDom {
 
 		File xmlFile = new File("master-gen.xml");
 
-		Document docXml = DocumentBuilderFactory.newInstance()
+		Document docDataXml = DocumentBuilderFactory.newInstance()
 				.newDocumentBuilder().parse(xmlFile);
 		Document docOutXml = DocumentBuilderFactory.newInstance()
 				.newDocumentBuilder().newDocument();
 
-		NodeList nList = docXml.getDocumentElement().getElementsByTagName("ue");
+		NodeList nList = docDataXml.getDocumentElement().getElementsByTagName("ue");
 
-		Element racine = docOutXml.createElement("list_unites");
+		Element racine = docOutXml.createElement("liste_unites");
 
 		for (int i = 0; i < nList.getLength(); i++) {
 
@@ -40,10 +40,11 @@ public class CreateDom {
 
 		TransformerFactory myFactory = TransformerFactory.newInstance();
 		Transformer transformer = myFactory.newTransformer();
-		transformer.setOutputProperty(OutputKeys.METHOD, "xml");
-		transformer.setOutputProperty(OutputKeys.ENCODING, "utf-8");
+		transformer.setOutputProperty(OutputKeys.ENCODING, "ISO-8859-1");
 		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-
+		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+		transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+		
 		transformer.transform(new DOMSource(docOutXml), new StreamResult(
 				System.out));
 

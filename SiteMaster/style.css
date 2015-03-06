@@ -20,28 +20,29 @@ img.title {
 
 table {
 	background: transparent;
-	margin-top: 15px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: 20px;
+	margin-left: 10%;
+	margin-bottom: 30px;
 	border-spacing: 2px;
-	border: solid 2px #EC9E00; 
+	border: solid 2px #000000; 
 }
 
 td {
-	background-color: #FFEE88; 
-	padding: 3px;
-	border: 0px;
+	background-color: #fff4b6; 
+	padding: 6px;
+	border: solid 1px #000000; 
 }
 
-th {
-	background-color: #FFCC66;
-	padding: 3px;
-	border: 0px;
+tr {
+	background-color: #ffe1a4;
+	padding: 6px;
+	border: solid 1px #000000; 
+	text-align: center;
 }
 
 h1 {
 	font-family: Arial, sans-serif;
-	font-size: large;
+	font-size: 24px;
 	text-align: center;
 	margin-top: 0px;
 	margin-bottom: 30px;
@@ -52,8 +53,8 @@ h2 {
 	width: 100%;
 	text-align: left;
 	font-weight: bold;
-	background-color: #58D3F7;
-	padding-left: 4px;
+	background-color: #ccf4ff;
+	padding-left: 40px;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	border-left: solid 2px #EC9E00;
@@ -76,8 +77,10 @@ h3 {
 }
 
 h4, .h4 {
+	padding-left: 5%;
+	font-size: 20px;
 	width: 100%;
-	color: #EC9E00;
+	color: #090275;
 	font-weight: bold;
 }
 

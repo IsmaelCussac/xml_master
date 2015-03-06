@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+<title>Master Informatique - Luminy</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<meta charset="utf-8">
+</head>
+<body>
+	<p class="new">
+		<img src="http://www.latp.univ-mrs.fr/~richard/mi3s/logo-sciences.png"
+			alt="Logo" class="title" /> Master Informatique - Luminy
+	</p>
+	<div class="leftFrame menu">
+		<b>Menu</b> <a href="www/index.html" class="menu1">Accueil</a> <a
+			href="www/intervenants.html" class="menu2">Intervenants</a> <a
+			href="www/unites.html" class="menu1">Unités</a> <a href="www/masters.html"
+			class="menu2">Masters</a>
+	</div>
+
+	<h1>Documentation</h1>
+
+	<h2>Introduction</h2>
+	<p>
+		Le but du projet est de construire des pages HTML à partir du contenu
+		du site du <a href="http://masterinfo.univ-mrs.fr/">master
+			informatique</a>. Pour cela nous utilisons une <a
+			href="donnees-master.xml">base de données</a> sous format XML pour
+		construire, à l'aide d'un fichier XSLT, un autre fichier XML
+		correspondant à une DTD structurée afin de simplifier l'organisation
+		des données. Une fois ce fichier XML créé, on utilise un autre fichier
+		XSLT pour créer une <a href="www/">liste de fichiers HTML</a> et ainsi
+		obtenir des pages web.
+	</p>
+
+	<h2>Architecture</h2>
+	<p>Voici comment sont organisés nos fichiers:</p>
+	<ul>
+		<li><a href="donnees-master.xml"><b>donnees-master.xml</b></a>:
+			contient toutes les données du site du Master (intervenants, UEs,
+			spécialités, parcours...). Respecte la dtd suivante:
+			donnees-master.dtd</li>
+		<li><a href="complement-donnees.xml"><b>complement-donnees.xml</b></a>:
+			ajout de données qui ne se trouvent pas dans le fichier de données.</li>
+		<li><b>donnees-to-xml.xsl:</b> XSLT qui permet de créer le
+			fichier master-gen.xml qui est une version plus simplifiée du fichier
+			de données.</li>
+		<li><a href="master-gen.xml"><b>master-gen.xml</b></a>: contient
+			les données qui seront publiées sur les pages HTML. Respecte la DTD
+			suivante: master-dtd.dtd</li>
+		<li><b>master-stylesheet.xsl:</b> XSLT qui permet de créer tous
+			les <a href="www/">documents HTML</a> dans le dossier www/</li>
+		<li><b>master-schema.xsd:</b> schema qui vérifie master-gen.xml.</li>
+		<li><b>CreateDom.java:</b> fichier Java qui répond à la question
+			posée dans le sujet: faire la liste des noms des unités.</li>
+		<li><b>xq.txt:</b> requête XQuery qui répond à la question du
+			sujet: donner pour chaque enseignant les UEs et parcours dont il est
+			responsable.</li>
+		<li><b>documentation.html:</b> vous êtes en train de la lire.</li>
+	</ul>
+	
+	<p>Les fichiers HTML sont organisés en plusieurs catégories:</p>
+	<ul>
+		<li><b>index.html:</b> racine du projet. Contient un menu qui contient des liens vers tous les autres.</li>
+		<li><b>unites.html:</b> contient une liste de liens vers tous les fichiers des UEs.</li>
+		<li><b>ue-ID.html:</b> est un fichier d'une UE.</li>
+		<li><b>intervenants.html:</b> contient une liste de liens vers tous les fichiers des intervenants.</li>
+		<li><b>intervenant-ID.html:</b> est un fichier d'un intervenant.</li>
+		<li><b>masters.html:</b> contient une liste de liens vers tous les fichiers des spécialités.</li>
+		<li><b>specialite-ID.html:</b> est le fichier d'une spécialité. Contient des liens vers les parcours.</li>
+		<li><b>parcours-ID.html:</b> est le fichier d'un parcours.</li>
+		<li><b>xq.html:</b> contient le résultat de la requête XQuery.</li>
+	</ul>
+
+
+	<h2>Makefile</h2>
+	<p>Le Makefile correspond à ce qui a été demandé à l'exception d'un ajout de la commande <i>gen</i> qui permet de générer le fichier master-gen.xml à partir du fichier de données et du fichier donnees-to-xml.xsl.</p>
+
+	<h2>Utilisation</h2>
+	<p>
+	
+	</p>
+</body>
+</html>

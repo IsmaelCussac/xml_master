@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	elementFormDefault="qualified">
 
@@ -110,6 +110,7 @@
 				<xs:element minOccurs="1" maxOccurs="unbounded" ref="semestre" />
 				<xs:element minOccurs="0" maxOccurs="unbounded" ref="responsable" />
 				<xs:element ref="description" />
+				<xs:element ref="objectifs" />
 				<xs:element minOccurs="0" maxOccurs="unbounded" ref="ref_intervenant" />
 				<xs:element ref="lieu_parc" />
 			</xs:sequence>
@@ -155,7 +156,10 @@
 				<xs:element ref="nb_credits" />
 				<xs:element minOccurs="0" maxOccurs="unbounded" ref="ref_intervenant" />
 				<xs:element ref="resume" />
-				<xs:element minOccurs="0" ref="plan" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="vol_cm" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="vol_td" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="vol_tp" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="vol_total" />
 				<xs:element minOccurs="0" ref="lieu_ue" />
 				<xs:element minOccurs="0" maxOccurs="unbounded" ref="info_comp" />
 			</xs:sequence>
@@ -204,21 +208,18 @@
 	</xs:element>
 
 	<xs:element name="resume">
-		<xs:complexType mixed="true">
-			<xs:choice minOccurs="0" maxOccurs="unbounded">
-				<xs:element ref="p" />
-				<xs:element ref="t" />
-				<xs:element ref="b" />
-				<xs:element ref="i" />
-				<xs:element ref="u" />
-				<xs:element ref="br" />
-				<xs:element ref="ol" />
-				<xs:element ref="ul" />
-			</xs:choice>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="any"/>
+			</xs:complexContent>
 		</xs:complexType>
 	</xs:element>
 
-	<xs:element name="plan" type="xs:string" />
+	<xs:element name="vol_cm" type="xs:string" />
+	<xs:element name="vol_td" type="xs:string" />
+	<xs:element name="vol_tp" type="xs:string" />
+	<xs:element name="vol_total" type="xs:string" />
+	
 
 	<xs:element name="lieu_ue">
 		<xs:complexType>
@@ -232,35 +233,29 @@
 	<xs:element name="nom_parc" type="xs:string" />
 
 	<xs:element name="description">
-	<xs:complexType mixed="true">
-			<xs:choice minOccurs="0" maxOccurs="unbounded">
-				<xs:element ref="p" />
-				<xs:element ref="t" />
-				<xs:element ref="b" />
-				<xs:element ref="i" />
-				<xs:element ref="u" />
-				<xs:element ref="br" />
-				<xs:element ref="ol" />
-				<xs:element ref="ul" />
-			</xs:choice>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="any"/>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="objectifs">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="any"/>
+			</xs:complexContent>
 		</xs:complexType>
 	</xs:element>
 
 	<xs:element name="debouche">
-		<xs:complexType mixed="true">
-			<xs:choice minOccurs="0" maxOccurs="unbounded">
-				<xs:element ref="p" />
-				<xs:element ref="t" />
-				<xs:element ref="b" />
-				<xs:element ref="i" />
-				<xs:element ref="u" />
-				<xs:element ref="br" />
-				<xs:element ref="ol" />
-				<xs:element ref="ul" />
-			</xs:choice>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="any"/>
+			</xs:complexContent>
 		</xs:complexType>
 	</xs:element>
-
+	
 	<xs:element name="responsable">
 		<xs:complexType mixed="true">
 			<xs:attributeGroup ref="ref" />
@@ -288,6 +283,16 @@
 			<xs:attributeGroup ref="unite" />
 		</xs:complexType>
 	</xs:element>
+	
+	<xs:element name="info_comp">
+		<xs:complexType mixed="true">
+			<xs:attribute name="type" />
+		</xs:complexType>
+	</xs:element>
+	
+	
+	
+	<!-- Mise en page -->
 
 	<xs:element name="ul">
 		<xs:complexType>
@@ -306,34 +311,38 @@
 	</xs:element>
 
 	<xs:element name="li">
-		<xs:complexType mixed="true">
-			<xs:choice minOccurs="0" maxOccurs="unbounded">
-				<xs:element ref="t" />
-				<xs:element ref="b" />
-				<xs:element ref="i" />
-				<xs:element ref="u" />
-				<xs:element ref="br" />
-				<xs:element ref="ol" />
-				<xs:element ref="ul" />
-			</xs:choice>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="any_sans_p"/>
+			</xs:complexContent>
 		</xs:complexType>
 	</xs:element>
 
 	<xs:element name="p">
-		<xs:complexType mixed="true">
-			<xs:choice minOccurs="0" maxOccurs="unbounded">
-				<xs:element ref="t" />
-				<xs:element ref="b" />
-				<xs:element ref="i" />
-				<xs:element ref="u" />
-				<xs:element ref="br" />
-				<xs:element ref="ol" />
-				<xs:element ref="ul" />
-			</xs:choice>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="any_sans_p"/>
+			</xs:complexContent>
 		</xs:complexType>
 	</xs:element>
-
-	<xs:element name="t" type="xs:string" />
+	
+	<xs:element name="table">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="tr" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="tr">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="td" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="td" type="xs:string" />
 	<xs:element name="b" type="xs:string" />
 	<xs:element name="i" type="xs:string" />
 	<xs:element name="u" type="xs:string" />
@@ -342,23 +351,28 @@
 	</xs:element>
 
 	<xs:complexType name="any" mixed="true">
-			<xs:choice minOccurs="0" maxOccurs="unbounded">
-				<xs:element ref="p" />
-				<xs:element ref="t" />
-				<xs:element ref="b" />
-				<xs:element ref="i" />
-				<xs:element ref="u" />
-				<xs:element ref="br" />
-				<xs:element ref="ol" />
-				<xs:element ref="ul" />
-			</xs:choice>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="p" />
+			<xs:element ref="b" />
+			<xs:element ref="i" />
+			<xs:element ref="u" />
+			<xs:element ref="br" />
+			<xs:element ref="ol" />
+			<xs:element ref="ul" />
+			<xs:element ref="table" />
+		</xs:choice>
 	</xs:complexType>
 
-	<xs:element name="info_comp">
-		<xs:complexType mixed="true">
-			<xs:attribute name="type" />
-		</xs:complexType>
-	</xs:element>
-	
-	<xs:element name="text" type="xs:string"/>
+	<xs:complexType name="any_sans_p" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="b" />
+			<xs:element ref="i" />
+			<xs:element ref="u" />
+			<xs:element ref="br" />
+			<xs:element ref="ol" />
+			<xs:element ref="ul" />
+			<xs:element ref="table" />
+		</xs:choice>
+	</xs:complexType>
+
 </xs:schema>

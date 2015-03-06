@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -22,6 +22,7 @@
 			<a href="masters.html" class="menu1">Masters</a>
 			<a href="xq.html" class="menu2">Question XQuery</a>
 			<a href="../dom.txt" class="menu1">Question Java arbre DOM</a>
+			<a href="../documentation.html" class="menu2">Documentation</a>
 		</div>
 	</xsl:template>
 
@@ -39,6 +40,7 @@
 			<a href="index.html" class="menu1">Accueil</a>
 			<a href="intervenants.html" class="menu2">Intervenants</a>
 			<a href="unites.html" class="menu1">Unités</a>
+			<a href="masters.html" class="menu2">Masters</a>
 		</div>
 	</xsl:template>
 

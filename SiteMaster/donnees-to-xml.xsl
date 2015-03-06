@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -20,9 +20,10 @@
 
 
 	<xsl:template match="/">
-		<xsl:document href="master-gen.xml" method="xml" indent="yes"
+		<xsl:document href="master-gen.xml" method="xml"
+			encoding="ISO-8859-1" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
 			doctype-system="master-dtd.dtd">
-			<master_info >
+			<master_info>
 
 				<!-- Liste des intervenants -->
 				<intervenants>
@@ -114,7 +115,7 @@
 								<semestre>
 									<nom_sem>
 										<xsl:value-of
-										select="$semestres[@id=current()/@value]/info[@nom='nom']/@value" />
+											select="$semestres[@id=current()/@value]/info[@nom='nom']/@value" />
 									</nom_sem>
 									<xsl:variable name="sem"
 										select="$semestres[@id = current()/@value]" />
@@ -176,13 +177,19 @@
 								</xsl:call-template>
 
 							</description>
+							<objectifs>
+								<xsl:call-template name="text_zone">
+									<xsl:with-param name="text"
+										select="current()/info[@nom='objectifs']" />
+								</xsl:call-template>
+							</objectifs>
 							<lieu_parc>
 								<xsl:attribute name="site"> 
 										<xsl:value-of
-								select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()" />
+									select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()" />
 									</xsl:attribute>
 								<xsl:copy-of
-								select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()" />
+									select="$complement//element[@ref=current()/@id and @type='lieu_parc']/text()" />
 							</lieu_parc>
 						</parcours>
 					</xsl:for-each>
@@ -214,9 +221,18 @@
 									<xsl:with-param name="text" select="info[@nom='contenu']" />
 								</xsl:call-template>
 							</resume>
-							<plan>
+							<vol_cm>
+								<xsl:value-of select="info[@nom='vol_cm']/@value" />
+							</vol_cm>
+							<vol_td>
+								<xsl:value-of select="info[@nom='vol_td']/@value" />
+							</vol_td>
+							<vol_tp>
+								<xsl:value-of select="info[@nom='vol_tp']/@value" />
+							</vol_tp>
+							<vol_total>
 								<xsl:value-of select="info[@nom='vol_global']/@value" />
-							</plan>
+							</vol_total>
 						</ue>
 					</xsl:for-each>
 				</unites>

@@ -26,7 +26,7 @@ tidy:
 
 xq:
 	@echo "\nCréation de la requête XQuery"
-	java -cp saxon9he.jar net.sf.saxon.Query !indent=yes xq.txt > www/xq.html
+	java -cp Outils/saxon9he.jar net.sf.saxon.Query !indent=yes xq.txt > www/xq.html
 
 java:
 	@echo "\nCréation du fichier DOM"

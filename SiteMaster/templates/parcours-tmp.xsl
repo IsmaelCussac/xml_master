@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -27,7 +27,7 @@
 
 		<xsl:if test="$respons != '' ">
 			<br />
-			<b>Responsables du parcours:</b>
+			<b>Responsables du parcours</b>
 			<ul>
 				<xsl:copy-of select="$respons" />
 			</ul>
@@ -35,10 +35,14 @@
 		</xsl:if>
 
 		<br />
-		<b>Description du parcours:</b>
+		<b>Description du parcours</b>
 		<div class="cadre">
 			<xsl:copy-of select="description/*" />
-
+		</div>
+		<br />
+		<b>Objectifs</b>
+		<div class="cadre">
+			<xsl:copy-of select="objectifs/*" />
 		</div>
 
 		<xsl:variable name="inter">
@@ -56,9 +60,10 @@
 				</xsl:for-each>
 			</xsl:for-each>
 		</xsl:variable>
+		<br />
 		<xsl:if test="$inter != '' ">
-			<br />
-			<b>Intervenants:</b>
+
+			<b>Intervenants</b>
 			<ul>
 				<xsl:copy-of select="$inter" />
 			</ul>
@@ -68,6 +73,7 @@
 		<b>Lieu d'enseignement:</b>
 		&#160;
 		<xsl:apply-templates select="lieu_parc" />
+		<br />
 		<br />
 		<br />
 		<br />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -8,14 +8,12 @@
 
 	<xsl:template name="intervenant">
 		<div class="cadre">
-			<p>
-				<b>Intervenant:&#160;</b>
-				<b>
-					<xsl:value-of select="nom_inter" />
-					&#160;
-					<xsl:value-of select="prenom_inter" />
-				</b>
-			</p>
+			<h4>
+				<xsl:value-of select="nom_inter" />
+				&#160;
+				<xsl:value-of select="prenom_inter" />
+			</h4>
+
 			<xsl:if test="mail[ (normalize-space(.) != '') ]">
 				<p>
 					<b>Mail:&#160;</b>
@@ -33,7 +31,7 @@
 				</p>
 			</xsl:if>
 			<xsl:if test="//ue[ref_intervenant = current()/@id]">
-				<b>UEs enseignées:</b>
+				<b>UEs enseignées</b>
 				<ul>
 					<xsl:for-each select="//ue[ref_intervenant = current()/@id]">
 						<li>
@@ -45,7 +43,7 @@
 				</ul>
 			</xsl:if>
 			<xsl:if test="//parcours[responsable/@ref = current()/@id]">
-				<b>Responsable des parcours:</b>
+				<b>Responsable des parcours</b>
 				<ul>
 					<xsl:for-each select="//parcours[responsable/@ref = current()/@id]">
 						<li>
@@ -57,6 +55,10 @@
 				</ul>
 			</xsl:if>
 		</div>
+		<br />
+		<br />
+		<br />
+		<br />
 	</xsl:template>
 
 </xsl:stylesheet>

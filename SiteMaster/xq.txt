@@ -66,6 +66,7 @@ declare function local:parcours($inter) {
 			<a href="index.html" class="menu1">Accueil</a>
 			<a href="intervenants.html" class="menu2">Intervenants</a>
 			<a href="unites.html" class="menu1">Unités</a>
+			<a href="masters.html" class="menu2">Masters</a>
 		</div>
     
     <p>

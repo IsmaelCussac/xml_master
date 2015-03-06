@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <!-- Entités -->
 <!ENTITY % id "id ID #IMPLIED">
@@ -27,7 +27,7 @@
 <!ATTLIST specialite %id;>
 
 <!-- Parcours -->
-<!ELEMENT parcours (nom_parc, semestre+, responsable*, description, ref_intervenant*, lieu_parc)>
+<!ELEMENT parcours (nom_parc, semestre+, responsable*, description, objectifs, ref_intervenant*, lieu_parc)>
 <!ATTLIST parcours %id;>
 
 <!-- Semestre -->
@@ -37,7 +37,7 @@
 
 <!-- UE -->
 <!ELEMENT unites (ue+)>
-<!ELEMENT ue (nom_ue, nom_identificateur, nb_credits, ref_intervenant*, resume, plan?, lieu_ue?)>
+<!ELEMENT ue (nom_ue, nom_identificateur, nb_credits, ref_intervenant*, resume, vol_cm?, vol_td?, vol_tp?, vol_total?, lieu_ue?)>
 <!ATTLIST ue %id;>
 
 
@@ -54,7 +54,10 @@
 <!ELEMENT ref_ue     (#PCDATA)> 
 <!ELEMENT nb_credits     (#PCDATA)>
 <!ELEMENT resume     ANY>
-<!ELEMENT plan     (#PCDATA)>
+<!ELEMENT vol_cm     (#PCDATA)>
+<!ELEMENT vol_td	 (#PCDATA)>
+<!ELEMENT vol_tp     (#PCDATA)>
+<!ELEMENT vol_total     (#PCDATA)>
 <!ELEMENT lieu_ue    (#PCDATA) >
 <!ATTLIST lieu_ue
     %site;
@@ -64,6 +67,7 @@
 <!ELEMENT nom_spe     (#PCDATA)> 
 <!ELEMENT nom_parc     (#PCDATA)>
 <!ELEMENT description     ANY>
+<!ELEMENT objectifs     ANY>
 <!ELEMENT debouche     ANY>
 <!ELEMENT responsable     (#PCDATA)>
 <!ATTLIST  responsable  
@@ -84,12 +88,15 @@
 
 <!ELEMENT ul (li+)>
 <!ELEMENT ol (li+)>
-<!ELEMENT li	(#PCDATA|b|i|u|br|ol|ul)* >
-<!ELEMENT p		(#PCDATA|b|i|u|br|ol|ul)* >
+<!ELEMENT li	(#PCDATA|b|i|u|br|ol|ul|table)* >
+<!ELEMENT p		(#PCDATA|b|i|u|br|ol|ul|table)* >
 <!ELEMENT b		(#PCDATA) >
 <!ELEMENT i		(#PCDATA) >
 <!ELEMENT u		(#PCDATA) >
 <!ELEMENT br		EMPTY >
+<!ELEMENT table		(tr+) >
+<!ELEMENT tr		(td+) >
+<!ELEMENT td		(#PCDATA) >
 
 
 
