@@ -32,9 +32,6 @@
 							<xsl:attribute name="id">
 								<xsl:value-of select="./@id" />
 							</xsl:attribute>
-							<idext>
-								<xsl:value-of select="info[@nom='idext']/@value" />
-							</idext>
 							<nom_inter>
 								<xsl:value-of select="info[@nom='nom']/@value" />
 							</nom_inter>

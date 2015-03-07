@@ -65,7 +65,6 @@
 	<xs:element name="intervenant">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="idext" />
 				<xs:element ref="nom_inter" />
 				<xs:element ref="prenom_inter" />
 				<xs:element ref="mail" />
@@ -170,7 +169,6 @@
 
 	<!-- Feuilles -->
 	<xs:element name="ref_parcours" type="xs:string" />
-	<xs:element name="idext" type="xs:string" />
 	<xs:element name="nom_inter" type="xs:string" />
 	<xs:element name="prenom_inter" type="xs:string" />
 

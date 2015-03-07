@@ -14,8 +14,8 @@
 	<div class="leftFrame menu">
 		<b>Menu</b> <a href="www/index.html" class="menu1">Accueil</a> <a
 			href="www/intervenants.html" class="menu2">Intervenants</a> <a
-			href="www/unites.html" class="menu1">Unités</a> <a href="www/masters.html"
-			class="menu2">Masters</a>
+			href="www/unites.html" class="menu1">Unités</a> <a
+			href="www/masters.html" class="menu2">Masters</a>
 	</div>
 
 	<h1>Documentation</h1>
@@ -49,7 +49,10 @@
 			les données qui seront publiées sur les pages HTML. Respecte la DTD
 			suivante: master-dtd.dtd</li>
 		<li><b>master-stylesheet.xsl:</b> XSLT qui permet de créer tous
-			les <a href="www/">documents HTML</a> dans le dossier www/</li>
+			les <a href="www/">documents HTML</a> dans le dossier www/ en
+			utilisant les templates du dossier /templates. C'est aussi ici qu'on
+			trouve les lignes XPath (listes d'UEs et d'enseignants de Luminy)
+			demandées dans les fiches de TP.</li>
 		<li><b>master-schema.xsd:</b> schema qui vérifie master-gen.xml.</li>
 		<li><b>CreateDom.java:</b> fichier Java qui répond à la question
 			posée dans le sujet: faire la liste des noms des unités.</li>
@@ -58,27 +61,35 @@
 			responsable.</li>
 		<li><b>documentation.html:</b> vous êtes en train de la lire.</li>
 	</ul>
-	
+
 	<p>Les fichiers HTML sont organisés en plusieurs catégories:</p>
 	<ul>
-		<li><b>index.html:</b> racine du projet. Contient un menu qui contient des liens vers tous les autres.</li>
-		<li><b>unites.html:</b> contient une liste de liens vers tous les fichiers des UEs.</li>
+		<li><b>index.html:</b> racine du projet. Contient un menu qui
+			contient des liens vers tous les autres.</li>
+		<li><b>unites.html:</b> contient une liste de liens vers tous les
+			fichiers des UEs.</li>
 		<li><b>ue-ID.html:</b> est un fichier d'une UE.</li>
-		<li><b>intervenants.html:</b> contient une liste de liens vers tous les fichiers des intervenants.</li>
+		<li><b>intervenants.html:</b> contient une liste de liens vers
+			tous les fichiers des intervenants.</li>
 		<li><b>intervenant-ID.html:</b> est un fichier d'un intervenant.</li>
-		<li><b>masters.html:</b> contient une liste de liens vers tous les fichiers des spécialités.</li>
-		<li><b>specialite-ID.html:</b> est le fichier d'une spécialité. Contient des liens vers les parcours.</li>
+		<li><b>masters.html:</b> contient une liste de liens vers tous
+			les fichiers des spécialités.</li>
+		<li><b>specialite-ID.html:</b> est le fichier d'une spécialité.
+			Contient des liens vers les parcours.</li>
 		<li><b>parcours-ID.html:</b> est le fichier d'un parcours.</li>
 		<li><b>xq.html:</b> contient le résultat de la requête XQuery.</li>
 	</ul>
 
 
 	<h2>Makefile</h2>
-	<p>Le Makefile correspond à ce qui a été demandé à l'exception d'un ajout de la commande <i>gen</i> qui permet de générer le fichier master-gen.xml à partir du fichier de données et du fichier donnees-to-xml.xsl.</p>
+	<p>
+		Le Makefile correspond à ce qui a été demandé à l'exception d'un ajout
+		de la commande <i>gen</i> qui permet de générer le fichier
+		master-gen.xml à partir du fichier de données et du fichier
+		donnees-to-xml.xsl.
+	</p>
 
 	<h2>Utilisation</h2>
-	<p>
-	
-	</p>
+	<p></p>
 </body>
 </html>

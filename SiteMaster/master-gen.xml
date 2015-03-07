@@ -3,157 +3,132 @@
 <master_info>
   <intervenants>
     <intervenant id="IN10388">
-      <idext>favre.b</idext>
       <nom_inter>FAVRE</nom_inter>
       <prenom_inter>Benoit</prenom_inter>
       <mail>benoit.favre@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN12068">
-      <idext>aucheupl</idext>
       <nom_inter>HABET</nom_inter>
       <prenom_inter>Djamal</prenom_inter>
       <mail>djamal.habet@univ-amu.fr</mail>
       <site>http://pageperso.lif.univ-mrs.fr/~djamal.habet/</site>
     </intervenant>
     <intervenant id="IN12316">
-      <idext>demongodini</idext>
       <nom_inter>DEMONGODIN</nom_inter>
       <prenom_inter>Isabelle</prenom_inter>
       <mail>isabel.demongodin@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN12544">
-      <idext>omar.boucelma</idext>
       <nom_inter>BOUCELMA</nom_inter>
       <prenom_inter>Omar</prenom_inter>
       <mail>omar.boucelma@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN12632">
-      <idext>tauclui3</idext>
       <nom_inter>OLIVETTI</nom_inter>
       <prenom_inter>Nicola</prenom_inter>
       <mail>nicola.olivetti@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN12834">
-      <idext>rachid.outbib</idext>
       <nom_inter>OUTBIB</nom_inter>
       <prenom_inter>Rachid</prenom_inter>
       <mail>rachid.outbib@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN12969">
-      <idext>lydie.rene</idext>
       <nom_inter>RENE CHABAROT</nom_inter>
       <prenom_inter>Lydie</prenom_inter>
       <mail>lydie.rene@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN13794">
-      <idext>folive</idext>
       <nom_inter>OLIVE</nom_inter>
       <prenom_inter>Frederic</prenom_inter>
       <mail>frederic.olive@univ-amu.fr</mail>
       <site>http://pageperso.lif.univ-mrs.fr/~frederic.olive/</site>
     </intervenant>
     <intervenant id="IN14758">
-      <idext>broche.m</idext>
       <nom_inter>BROCHE</nom_inter>
       <prenom_inter>Martine</prenom_inter>
       <mail>martine.broche@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN16209">
-      <idext>ralaivola.h</idext>
       <nom_inter>RALAIVOLA</nom_inter>
       <prenom_inter>Hery Liva</prenom_inter>
       <mail>hery-liva.ralaivola@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN16625">
-      <idext>ssellami</idext>
       <nom_inter>SELLAMI</nom_inter>
       <prenom_inter>Sana</prenom_inter>
       <mail>sana.sellami@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN17708">
-      <idext>smiche01</idext>
       <nom_inter>MICHEL</nom_inter>
       <prenom_inter>Stephane</prenom_inter>
       <mail/>
     </intervenant>
     <intervenant id="IN18">
-      <idext>massat</idext>
       <nom_inter>MASSAT</nom_inter>
       <prenom_inter>Jean Luc</prenom_inter>
       <mail>jean-luc.massat@univ-amu.fr</mail>
       <site>http://www.dil.univ-mrs.fr/~massat/copie/index.html</site>
     </intervenant>
     <intervenant id="IN2563">
-      <idext>godard</idext>
       <nom_inter>GODARD</nom_inter>
       <prenom_inter>Emmanuel</prenom_inter>
       <mail>emmanuel.godard@univ-amu.fr</mail>
       <site>http://pageperso.lif.univ-mrs.fr/~emmanuel.godard/</site>
     </intervenant>
     <intervenant id="IN3524">
-      <idext>lugiez</idext>
       <nom_inter>LUGIEZ</nom_inter>
       <prenom_inter>Denis</prenom_inter>
       <mail>denis.lugiez@univ-amu.fr</mail>
       <site>http://pageperso.lif.univ-mrs.fr/~denis.lugiez/</site>
     </intervenant>
     <intervenant id="IN616">
-      <idext>agopian</idext>
       <nom_inter>AGOPIAN</nom_inter>
       <prenom_inter>Roland</prenom_inter>
       <mail>roland.agopian@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN6213">
-      <idext>alaboure</idext>
       <nom_inter>LABOUREL</nom_inter>
       <prenom_inter>Arnaud</prenom_inter>
       <mail>arnaud.labourel@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN7001">
-      <idext>creignou</idext>
       <nom_inter>CREIGNOU</nom_inter>
       <prenom_inter>Nadia</prenom_inter>
       <mail>nadia.creignou@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN7680">
-      <idext>lai</idext>
       <nom_inter>LAI</nom_inter>
       <prenom_inter>Claude</prenom_inter>
       <mail>claude.lai@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN7722">
-      <idext>novelli</idext>
       <nom_inter>NOVELLI</nom_inter>
       <prenom_inter>Noel</prenom_inter>
       <mail>noel.novelli@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN7931">
-      <idext>calabrese</idext>
       <nom_inter>RISCH</nom_inter>
       <prenom_inter>Sylvie</prenom_inter>
       <mail>sylvie.risch@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN8006">
-      <idext>boi</idext>
       <nom_inter>BOI</nom_inter>
       <prenom_inter>Jean Marc</prenom_inter>
       <mail>jean-marc.boi@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN8086">
-      <idext>vaxes</idext>
       <nom_inter>VAXES</nom_inter>
       <prenom_inter>Yann</prenom_inter>
       <mail>yann.vaxes@univ-amu.fr</mail>
     </intervenant>
     <intervenant id="IN9224">
-      <idext>morin.r</idext>
       <nom_inter>MORIN</nom_inter>
       <prenom_inter>Remi</prenom_inter>
       <mail>remi.morin@univ-amu.fr</mail>
       <site>http://pageperso.lif.univ-mrs.fr/~remi.morin/</site>
     </intervenant>
     <intervenant id="IN9941">
-      <idext>bechet.f</idext>
       <nom_inter>BECHET</nom_inter>
       <prenom_inter>Frederic</prenom_inter>
       <mail>frederic.bechet@univ-amu.fr</mail>

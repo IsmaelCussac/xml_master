@@ -18,7 +18,7 @@
 
 <!-- Liste d'intervenants -->
 <!ELEMENT intervenants (intervenant+)>
-<!ELEMENT intervenant (idext, nom_inter, prenom_inter, mail?, site?)>
+<!ELEMENT intervenant (nom_inter, prenom_inter, mail?, site?)>
 <!ATTLIST intervenant %id;>
 
 <!-- Spécialité -->

@@ -18,5 +18,21 @@
 		</a>
 	</xsl:template>
 
+	<!-- LISTE -->
+	<xsl:template name="faire-une-liste">
+		<xsl:param name="objets" />
+		<xsl:param name="nom_fichier" />
+		<xsl:param name="nom_elem" />
+		<ul>
+			<xsl:for-each select="$objets">
+				<xsl:sort select="current()/*[1]" />
+				<li>
+					<a href="{$nom_fichier}-{current()/@id}.html">
+						<xsl:value-of select="current()/*[name()=$nom_elem]" />
+					</a>
+				</li>
+			</xsl:for-each>
+		</ul>
+	</xsl:template>
 
 </xsl:stylesheet>
