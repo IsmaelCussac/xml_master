@@ -33,7 +33,7 @@
 			<xsl:if test="//ue[ref_intervenant = current()/@id]">
 				<b>UEs enseignées</b>
 				<ul>
-					<xsl:for-each select="//ue[ref_intervenant = current()/@id]">
+					<xsl:for-each select="key('ues','all')[ref_intervenant = current()/@id]">
 						<li>
 							<a href="ue-{@id}.html">
 								<xsl:value-of select="nom_ue" />
@@ -42,10 +42,10 @@
 					</xsl:for-each>
 				</ul>
 			</xsl:if>
-			<xsl:if test="//parcours[responsable/@ref = current()/@id]">
+			<xsl:if test="key('parcours','all')[responsable/@ref = current()/@id]">
 				<b>Responsable des parcours</b>
 				<ul>
-					<xsl:for-each select="//parcours[responsable/@ref = current()/@id]">
+					<xsl:for-each select="key('parcours','all')[responsable/@ref = current()/@id]">
 						<li>
 							<a href="parcours-{@id}.html">
 								<xsl:value-of select="nom_parc" />

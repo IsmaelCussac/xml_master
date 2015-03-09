@@ -10,7 +10,7 @@ declare function local:main() {
 declare function local:intervenant($inter) {
 	
 	<div class="cadre">
-		<b>{$inter/nom_inter} {$inter/prenom_inter}</b><br/>
+		<h4>{$inter/nom_inter} {$inter/prenom_inter}</h4>
 		<u>Enseignements</u>
 		<ul>{local:unites($inter)}</ul>
 		<u>Parcours</u>
@@ -31,7 +31,7 @@ declare function local:unites($inter) {
 		return <li><a href="ue-{$i/@id}.html">{$i/nom_ue}</a></li>
 		
 	else
-		<p>Aucun</p>
+		<p>Aucune UE assignée</p>
 };
  
 declare function local:parcours($inter) {
@@ -46,7 +46,7 @@ declare function local:parcours($inter) {
 		return <li><a href="parcours-{$i/@id}.html">{$i/nom_parc}</a></li>
 		
    	else 
-   		<p>Aucun</p>
+   		<p>Aucun parcours assigné</p>
 };
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -59,6 +59,8 @@ declare function local:parcours($inter) {
   </head>
   <body>
   	<p xmlns="" class="new">
+  	<img src="http://www.latp.univ-mrs.fr/~richard/mi3s/logo-sciences.png"
+				alt="Logo" class="title" />
 								Master Informatique - Luminy
 							</p>
     <div class="leftFrame menu">
@@ -73,9 +75,6 @@ declare function local:parcours($inter) {
     	{local:main()}
     </p>
     
-    
-    
-  
   </body>
 </html>
   

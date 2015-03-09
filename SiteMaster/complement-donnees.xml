@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE objets SYSTEM "complement-donnees.dtd">
 
+<!-- Données complémentaires utilisées pour générer le fichier master-gen.xml -->
 <elements>
 	<element ref="IN18" type="site">http://www.dil.univ-mrs.fr/~massat/copie/index.html</element>
 	<element ref="IN13794" type="site">http://pageperso.lif.univ-mrs.fr/~frederic.olive/</element>

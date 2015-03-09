@@ -17,12 +17,12 @@
 	<xsl:template name="menu">
 		<div class="leftFrame menu">
 			<b>Menu</b>
-			<a href="intervenants.html" class="menu1">Intervenants</a>
-			<a href="unites.html" class="menu2">Unités</a>
-			<a href="masters.html" class="menu1">Masters</a>
-			<a href="xq.html" class="menu2">Question XQuery</a>
-			<a href="../dom.txt" class="menu1">Question Java arbre DOM</a>
-			<a href="../documentation.html" class="menu2">Documentation</a>
+			<a href="../documentation.html" class="menu1">Documentation</a>
+			<a href="intervenants.html" class="menu2">Intervenants</a>
+			<a href="unites.html" class="menu1">Unités</a>
+			<a href="masters.html" class="menu2">Masters</a>
+			<a href="xq.html" class="menu1">Question XQuery</a>
+			<a href="../dom.txt" class="menu2">Question Java arbre DOM</a>
 			<a href="ue3crluminy.html" class="menu1">UEs à 3 crédits sur Luminy</a>
 			<a href="interluminy.html" class="menu2">Enseignants de Luminy</a>
 			

@@ -2,10 +2,16 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
 
-	<xsl:output method="xml" encoding="iso-8859-1" indent="yes"
+	<xsl:output method="xml" encoding="utf-8" indent="yes"
 		doctype-system="master-dtd.dtd" />
 
 	<xsl:include href="templates/includes.xsl" />
+
+	<!-- Key pas vraiment utiles -->
+	<xsl:key use="'all'" name="enseignants" match="//intervenant" />
+	<xsl:key use="'all'" name="ues" match="//ue" />
+	<xsl:key use="'all'" name="specialites" match="//specialite" />
+	<xsl:key use="'all'" name="parcours" match="//parcours" />
 
 	<xsl:template match="/">
 
@@ -71,7 +77,7 @@
 					<div class="liste">
 						<b>Liste des intervenants:</b>
 						<xsl:call-template name="faire-une-liste">
-							<xsl:with-param name="objets" select="//intervenant" />
+							<xsl:with-param name="objets" select="key('enseignants','all')" />
 							<xsl:with-param name="nom_fichier" select="'intervenant'" />
 							<xsl:with-param name="nom_elem" select="'nom_inter'" />
 						</xsl:call-template>
@@ -124,7 +130,7 @@
 					<div class="liste">
 						<b>Liste des unités d'enseignement:</b>
 						<xsl:call-template name="faire-une-liste">
-							<xsl:with-param name="objets" select="//ue" />
+							<xsl:with-param name="objets" select="key('ues','all')" />
 							<xsl:with-param name="nom_fichier" select="'ue'" />
 							<xsl:with-param name="nom_elem" select="'nom_ue'" />
 						</xsl:call-template>
@@ -176,7 +182,7 @@
 					<div class="liste">
 						<b>Liste des masters</b>
 						<xsl:call-template name="faire-une-liste">
-							<xsl:with-param name="objets" select="//specialite" />
+							<xsl:with-param name="objets" select="key('specialites','all')" />
 							<xsl:with-param name="nom_fichier" select="'specialite'" />
 							<xsl:with-param name="nom_elem" select="'nom_spe'" />
 						</xsl:call-template>
@@ -230,8 +236,8 @@
 				</html>
 			</xsl:document>
 		</xsl:for-each>
-		
-		
+
+
 		<!-- UEs DE 3 CREDITS DE LUMINY -->
 		<xsl:document href="www/ue3crluminy.html" method="xml"
 			encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
@@ -251,7 +257,8 @@
 					<div class="liste">
 						<b>Liste des UEs à 3 crédits qui se déroulent à Luminy</b>
 						<xsl:call-template name="faire-une-liste">
-							<xsl:with-param name="objets" select="//ue[nb_credits = '3'][@id = //ref_ue[./ancestor::parcours/lieu_parc[@site = 'Luminy']]]" />
+							<xsl:with-param name="objets"
+								select="//ue[nb_credits = '3'][@id = //ref_ue[./ancestor::parcours/lieu_parc[@site = 'Luminy']]]" />
 							<xsl:with-param name="nom_fichier" select="'ue'" />
 							<xsl:with-param name="nom_elem" select="'nom_ue'" />
 						</xsl:call-template>
@@ -259,8 +266,8 @@
 				</body>
 			</html>
 		</xsl:document>
-		
-		
+
+
 		<!-- ENSEIGNANTS DE LUMINY -->
 		<xsl:document href="www/interluminy.html" method="xml"
 			encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
@@ -280,7 +287,8 @@
 					<div class="liste">
 						<b>Liste des enseignants qui n'enseignent qu'à Luminy</b>
 						<xsl:call-template name="faire-une-liste">
-							<xsl:with-param name="objets" select="//intervenant[@id = //ue[@id = //ref_ue[./ancestor::parcours/lieu_parc[@site = 'Luminy']]]/ref_intervenant]" />
+							<xsl:with-param name="objets"
+								select="//intervenant[@id = //ue[@id = //ref_ue[./ancestor::parcours/lieu_parc[@site = 'Luminy']]]/ref_intervenant]" />
 							<xsl:with-param name="nom_fichier" select="'intervenant'" />
 							<xsl:with-param name="nom_elem" select="'nom_inter'" />
 						</xsl:call-template>
@@ -288,7 +296,6 @@
 				</body>
 			</html>
 		</xsl:document>
-		
 	</xsl:template>
 
 </xsl:stylesheet>

@@ -121,7 +121,7 @@ p.new {		/* titre haut de page */
 }
 
 
-.leftFrame { /* tmenu gauche */
+.leftFrame { /* menu gauche */
 		position: absolute;
 		left: 3%;
 		top:20%;

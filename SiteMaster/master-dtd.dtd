@@ -85,6 +85,8 @@
 <!ATTLIST nom_bloc_ue
     %unite;
     >
+    
+<!-- Mise en page -->
 
 <!ELEMENT ul (li+)>
 <!ELEMENT ol (li+)>

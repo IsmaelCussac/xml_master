@@ -21,7 +21,7 @@
 
 	<xsl:template match="/">
 		<xsl:document href="master-gen.xml" method="xml"
-			encoding="ISO-8859-1" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
+			encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
 			doctype-system="master-dtd.dtd">
 			<master_info>
 
@@ -53,7 +53,7 @@
 					</xsl:for-each>
 				</intervenants>
 
-				<!-- master -->
+				<!-- Master -->
 				<master>
 
 					<!-- Construit la liste des spécialités -->
@@ -84,17 +84,16 @@
 							<description>
 								<xsl:call-template name="text_zone">
 									<xsl:with-param name="text"
-										select="current()/info[@nom = 'connaissances']" />
+										select="info[@nom = 'connaissances']" />
 								</xsl:call-template>
 							</description>
 							<debouche>
 								<xsl:call-template name="text_zone">
-									<xsl:with-param name="text"
-										select="current()/info[@nom = 'debouches']" />
+									<xsl:with-param name="text" select="info[@nom = 'debouches']" />
 								</xsl:call-template>
 							</debouche>
 							<finalite>
-								<xsl:value-of select="current()/info[@nom = 'finalite']/@value" />
+								<xsl:value-of select="info[@nom = 'finalite']/@value" />
 							</finalite>
 						</specialite>
 					</xsl:for-each>
@@ -116,6 +115,8 @@
 									</nom_sem>
 									<xsl:variable name="sem"
 										select="$semestres[@id = current()/@value]" />
+
+									<!-- Cas des UEs normales -->
 									<bloc_ue>
 										<nom_bloc_ue>Unités obligatoires</nom_bloc_ue>
 										<xsl:for-each select="$sem/info[@nom='structure']">
@@ -126,6 +127,8 @@
 											</xsl:if>
 										</xsl:for-each>
 									</bloc_ue>
+
+									<!-- Cas des références vers des semestres "groupe" -->
 									<xsl:for-each select="$sem/info[@nom = 'structure']">
 										<xsl:if test="$groupes[@id=current()/@value]">
 											<xsl:variable name="gr"
@@ -141,6 +144,8 @@
 												</xsl:for-each>
 											</bloc_ue>
 										</xsl:if>
+
+										<!-- Cas des références vers des semestres "option" -->
 										<xsl:if test="$options[@id = current()/@value]">
 											<xsl:variable name="op"
 												select="$options[@id = current()/@value]" />
@@ -237,6 +242,8 @@
 		</xsl:document>
 	</xsl:template>
 
+
+	<!-- Pour copier un texte et sa mise en forme -->
 	<xsl:template name="text_zone">
 		<xsl:param name="text" />
 		<xsl:apply-templates select="$text/*" />
@@ -286,6 +293,7 @@
 
 	</xsl:template>
 
+	<!-- permet de supprimer la balise <t> non reconnue par en HTML -->
 	<xsl:template match="t">
 		<xsl:value-of select="." />
 	</xsl:template>
