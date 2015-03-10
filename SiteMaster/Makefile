@@ -2,7 +2,7 @@ XSLT = xsltproc
 LINT = xmllint --noout
 
 
-all: clean gen dtd xsd web tidy xq java
+all: clean gen dtd xsd web xq tidy java
 
 
 gen: donnees-to-xml.xsl donnees-master.xml

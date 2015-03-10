@@ -1,3 +1,6 @@
+declare option saxon:output "doctype-public=-//W3C//DTD XHTML 1.0 Strict//EN";
+declare option saxon:output "doctype-system=-http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd";
+
 declare function local:main() {
 
 	let $doc := doc('master-gen.xml')//intervenant
@@ -10,7 +13,7 @@ declare function local:main() {
 declare function local:intervenant($inter) {
 	
 	<div class="cadre">
-		<h4>{$inter/nom_inter} {$inter/prenom_inter}</h4>
+		<h4>{data($inter/nom_inter)} &#160; {data($inter/prenom_inter)}</h4>
 		<u>Enseignements</u>
 		<ul>{local:unites($inter)}</ul>
 		<u>Parcours</u>
@@ -28,10 +31,10 @@ declare function local:unites($inter) {
 	if($cmp != 0) then
 		for $i in $ue
 		order by $i/nom_ue
-		return <li><a href="ue-{$i/@id}.html">{$i/nom_ue}</a></li>
+		return <li><a href="ue-{$i/@id}.html">{data($i/nom_ue)}</a></li>
 		
 	else
-		<p>Aucune UE assignée</p>
+		<li>Aucune UE assignée</li>
 };
  
 declare function local:parcours($inter) {
@@ -43,38 +46,38 @@ declare function local:parcours($inter) {
 	if($cmp != 0) then
 		for $i in $parc
 		order by $i/nom_parc
-		return <li><a href="parcours-{$i/@id}.html">{$i/nom_parc}</a></li>
+		return <li><a href="parcours-{$i/@id}.html">{data($i/nom_parc)}</a></li>
 		
    	else 
-   		<p>Aucun parcours assigné</p>
+   		<li>Aucun parcours assigné</li>
 };
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head >
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>
-						Master Informatique - Luminy
-					</title>
-    <link rel="stylesheet" href="../style.css" type="test/css" />
-  </head>
-  <body>
-  	<p xmlns="" class="new">
-  	<img src="http://www.latp.univ-mrs.fr/~richard/mi3s/logo-sciences.png"
-				alt="Logo" class="title" />
-								Master Informatique - Luminy
-							</p>
-    <div class="leftFrame menu">
+  	<head >
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <title>
+							Master Informatique - Luminy
+						</title>
+	    <link rel="stylesheet" href="../style.css" type="test/css" />
+  	</head>
+  	<body>
+	  	<p xmlns="" class="new">
+	  	<img src="http://www.latp.univ-mrs.fr/~richard/mi3s/logo-sciences.png"
+					alt="Logo" class="title" />
+									Master Informatique - Luminy
+								</p>
+	    <div class="leftFrame menu">
 			<b>Menu</b>
 			<a href="index.html" class="menu1">Accueil</a>
 			<a href="intervenants.html" class="menu2">Intervenants</a>
 			<a href="unites.html" class="menu1">Unités</a>
 			<a href="masters.html" class="menu2">Masters</a>
 		</div>
+	
+	    {local:main()}
     
-    <p>
-    	{local:main()}
-    </p>
-    
-  </body>
+  	</body>
 </html>
+
   
