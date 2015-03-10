@@ -27,9 +27,9 @@ web: master-gen.xml master-stylesheet.xsl
 	
 tidy:
 	@echo "\nValidation des fichiers www./*.html"
-	tidy -utf8 -imqe -asxhtml www/*.html
+	tidy -ascii -imqe -asxhtml www/*.html
 	@echo "\nValidation de la documentation"
-	tidy -utf8 -imqe -asxhtml documentation.html
+	tidy -ascii -imqe -asxhtml documentation.html
 
 
 xq:

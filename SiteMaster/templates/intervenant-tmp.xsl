@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -31,7 +31,7 @@
 				</p>
 			</xsl:if>
 			<xsl:if test="//ue[ref_intervenant = current()/@id]">
-				<b>UEs enseignÃ©es</b>
+				<b>UEs enseignées</b>
 				<ul>
 					<xsl:for-each select="key('ues','all')[ref_intervenant = current()/@id]">
 						<li>

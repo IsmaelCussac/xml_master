@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE objets SYSTEM "complement-donnees.dtd">
 
-<!-- DonnÃ©es complÃ©mentaires utilisÃ©es pour gÃ©nÃ©rer le fichier master-gen.xml -->
+<!-- Données complémentaires utilisées pour générer le fichier master-gen.xml -->
 <elements>
 	<element ref="IN18" type="site">http://www.dil.univ-mrs.fr/~massat/copie/index.html</element>
 	<element ref="IN13794" type="site">http://pageperso.lif.univ-mrs.fr/~frederic.olive/</element>
@@ -11,17 +11,17 @@
 	<element ref="IN9224" type="site">http://pageperso.lif.univ-mrs.fr/~remi.morin/</element>
 	
 	
-	<element ref="PRSIN4T0" type="lieu_parc">Luminy_Saint-JÃ©rome</element>
+	<element ref="PRSIN4T0" type="lieu_parc">Luminy_Saint-Jérome</element>
 	<element ref="PRSIN5A0" type="lieu_parc">Luminy</element>
-	<element ref="PRSIN5B1" type="lieu_parc">Saint-JÃ©rome</element>
+	<element ref="PRSIN5B1" type="lieu_parc">Saint-Jérome</element>
 	<element ref="PRSIN5B2" type="lieu_parc">Luminy</element>
-	<element ref="PRSIN5B3" type="lieu_parc">Saint-JÃ©rome</element>
+	<element ref="PRSIN5B3" type="lieu_parc">Saint-Jérome</element>
 	<element ref="PRSIN5C1" type="lieu_parc">Luminy</element>
 	<element ref="PRSIN5C2" type="lieu_parc">Luminy</element>
-	<element ref="PRSIN5D0" type="lieu_parc">Saint-JÃ©rome</element>
+	<element ref="PRSIN5D0" type="lieu_parc">Saint-Jérome</element>
 	<element ref="PRSIN5E1" type="lieu_parc">Luminy</element>
 	<element ref="PRSIN5E2" type="lieu_parc">Luminy</element>
 	<element ref="PRSIN5F0" type="lieu_parc">Luminy</element>
-	<element ref="PRSIN5G0" type="lieu_parc">Saint-JÃ©rome</element>
+	<element ref="PRSIN5G0" type="lieu_parc">Saint-Jérome</element>
 
 </elements>

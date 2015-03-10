@@ -1,5 +1,7 @@
 declare option saxon:output "doctype-public=-//W3C//DTD XHTML 1.0 Strict//EN";
 declare option saxon:output "doctype-system=-http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd";
+declare option saxon:output "method=xml";
+declare option saxon:output "encoding=iso-8859-1";
 
 declare function local:main() {
 
@@ -55,7 +57,7 @@ declare function local:parcours($inter) {
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   	<head >
-	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	    <title>
 							Master Informatique - Luminy
 						</title>

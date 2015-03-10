@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -19,11 +19,11 @@
 			<b>Menu</b>
 			<a href="../documentation.html" class="menu1">Documentation</a>
 			<a href="intervenants.html" class="menu2">Intervenants</a>
-			<a href="unites.html" class="menu1">UnitÃ©s</a>
+			<a href="unites.html" class="menu1">Unités</a>
 			<a href="masters.html" class="menu2">Masters</a>
 			<a href="xq.html" class="menu1">Question XQuery</a>
 			<a href="../dom.txt" class="menu2">Question Java arbre DOM</a>
-			<a href="ue3crluminy.html" class="menu1">UEs Ã  3 crÃ©dits sur Luminy</a>
+			<a href="ue3crluminy.html" class="menu1">UEs à 3 crédits sur Luminy</a>
 			<a href="interluminy.html" class="menu2">Enseignants de Luminy</a>
 			
 		</div>
@@ -42,7 +42,7 @@
 			<b>Menu</b>
 			<a href="index.html" class="menu1">Accueil</a>
 			<a href="intervenants.html" class="menu2">Intervenants</a>
-			<a href="unites.html" class="menu1">UnitÃ©s</a>
+			<a href="unites.html" class="menu1">Unités</a>
 			<a href="masters.html" class="menu2">Masters</a>
 		</div>
 	</xsl:template>

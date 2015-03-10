@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -12,7 +12,7 @@
 		</h3>
 
 
-		<b>Responsables de la spÃ©cialitÃ©</b>
+		<b>Responsables de la spécialité</b>
 		<ul>
 			<xsl:for-each select="responsable">
 				<xsl:variable name="respon"
@@ -39,19 +39,19 @@
 			</xsl:for-each>
 		</ul>
 
-		<b>Description de la spÃ©cialitÃ©</b>
+		<b>Description de la spécialité</b>
 		<div class="cadre">
 			<xsl:copy-of select="description/*" />
 		</div>
 		<br />
-		<b>DÃ©bouchÃ©s</b>
+		<b>Débouchés</b>
 		<div class="cadre">
 			<xsl:copy-of select="debouche/*" />
 		</div>
 
 		<xsl:if test="finalite[ (normalize-space(.) != '') ]">
 			<br />
-			<b>FinalitÃ©:</b>
+			<b>Finalité:</b>
 			&#160;
 			<xsl:if test="finalite='R'">
 				Recherche

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -12,7 +12,7 @@
 			<xsl:value-of select="nom_ue" />
 		</h3>
 
-		<b>CrÃ©dits:</b>
+		<b>Crédits:</b>
 		&#160;
 		<xsl:value-of select="nb_credits" />
 		<br />
@@ -92,7 +92,7 @@
 			<xsl:value-of select="plan" />
 		</xsl:if>
 
-		<b>EnseignÃ© dans les parcours suivants</b>
+		<b>Enseigné dans les parcours suivants</b>
 		<ul>
 			<xsl:for-each select="//ref_ue[. = current()/@id]">
 				<li>

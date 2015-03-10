@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<!-- Construit le fichier master-gen.xml Ã  partir des fichiers donnees-master.xml 
+	<!-- Construit le fichier master-gen.xml à partir des fichiers donnees-master.xml 
 		et complement-donnees.xml -->
 
 	<xsl:variable name="objets" select="//objet" />
@@ -21,7 +21,7 @@
 
 	<xsl:template match="/">
 		<xsl:document href="master-gen.xml" method="xml"
-			encoding="utf-8" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
+			encoding="iso-8859-1" indent="yes" doctype-public="//W3C//DTD XHTML 1.0 Strict//EN"
 			doctype-system="master-dtd.dtd">
 			<master_info>
 
@@ -56,7 +56,7 @@
 				<!-- Master -->
 				<master>
 
-					<!-- Construit la liste des spÃ©cialitÃ©s -->
+					<!-- Construit la liste des spécialités -->
 					<xsl:for-each select="$specialites">
 						<specialite>
 							<xsl:attribute name="id">
@@ -118,7 +118,7 @@
 
 									<!-- Cas des UEs normales -->
 									<bloc_ue>
-										<nom_bloc_ue>UnitÃ©s obligatoires</nom_bloc_ue>
+										<nom_bloc_ue>Unités obligatoires</nom_bloc_ue>
 										<xsl:for-each select="$sem/info[@nom='structure']">
 											<xsl:if test="$unites[@id = current()/@value]">
 												<ref_ue>
@@ -128,7 +128,7 @@
 										</xsl:for-each>
 									</bloc_ue>
 
-									<!-- Cas des rÃ©fÃ©rences vers des semestres "groupe" -->
+									<!-- Cas des références vers des semestres "groupe" -->
 									<xsl:for-each select="$sem/info[@nom = 'structure']">
 										<xsl:if test="$groupes[@id=current()/@value]">
 											<xsl:variable name="gr"
@@ -145,7 +145,7 @@
 											</bloc_ue>
 										</xsl:if>
 
-										<!-- Cas des rÃ©fÃ©rences vers des semestres "option" -->
+										<!-- Cas des références vers des semestres "option" -->
 										<xsl:if test="$options[@id = current()/@value]">
 											<xsl:variable name="op"
 												select="$options[@id = current()/@value]" />
@@ -197,7 +197,7 @@
 					</xsl:for-each>
 				</master>
 
-				<!-- Liste des unitÃ©s -->
+				<!-- Liste des unités -->
 				<unites>
 					<xsl:for-each select="$unites">
 						<ue>

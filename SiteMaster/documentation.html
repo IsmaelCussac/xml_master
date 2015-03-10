@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Master Informatique - Luminy</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -13,7 +13,7 @@
 	<div class="leftFrame menu">
 		<b>Menu</b> <a href="www/index.html" class="menu1">Accueil</a> <a
 			href="www/intervenants.html" class="menu2">Intervenants</a> <a
-			href="www/unites.html" class="menu1">UnitÃ©s</a> <a
+			href="www/unites.html" class="menu1">Unités</a> <a
 			href="www/masters.html" class="menu2">Masters</a>
 	</div>
 
@@ -21,47 +21,47 @@
 
 	<h2>Introduction</h2>
 	<p>
-		Le but du projet est de construire des pages HTML Ã  partir du contenu
+		Le but du projet est de construire des pages HTML à partir du contenu
 		du site du <a href="http://masterinfo.univ-mrs.fr/">master
 			informatique</a>. Pour cela nous utilisons une <a
-			href="donnees-master.xml">base de donnÃ©es</a> sous format XML pour
-		construire, Ã  l'aide d'un fichier XSLT, un autre fichier XML
-		correspondant Ã  une DTD structurÃ©e afin de simplifier l'organisation
-		des donnÃ©es. Une fois ce fichier XML crÃ©Ã©, on utilise un autre fichier
-		XSLT pour crÃ©er une <a href="www/">liste de fichiers HTML</a> et ainsi
+			href="donnees-master.xml">base de données</a> sous format XML pour
+		construire, à l'aide d'un fichier XSLT, un autre fichier XML
+		correspondant à une DTD structurée afin de simplifier l'organisation
+		des données. Une fois ce fichier XML créé, on utilise un autre fichier
+		XSLT pour créer une <a href="www/">liste de fichiers HTML</a> et ainsi
 		obtenir des pages web.
 	</p>
 
 	<h2>Architecture</h2>
-	<p>Voici comment sont organisÃ©s nos fichiers:</p>
+	<p>Voici comment sont organisés nos fichiers:</p>
 	<ul>
 		<li><a href="donnees-master.xml"><b>donnees-master.xml</b></a>:
-			contient toutes les donnÃ©es du site du Master (intervenants, UEs,
-			spÃ©cialitÃ©s, parcours...). Respecte la dtd suivante:
+			contient toutes les données du site du Master (intervenants, UEs,
+			spécialités, parcours...). Respecte la dtd suivante:
 			donnees-master.dtd</li>
 		<li><a href="complement-donnees.xml"><b>complement-donnees.xml</b></a>:
-			ajout de donnÃ©es qui ne se trouvent pas dans le fichier de donnÃ©es.</li>
-		<li><b>donnees-to-xml.xsl:</b> XSLT qui permet de crÃ©er le
-			fichier master-gen.xml qui est une version plus simplifiÃ©e du fichier
-			de donnÃ©es.</li>
+			ajout de données qui ne se trouvent pas dans le fichier de données.</li>
+		<li><b>donnees-to-xml.xsl:</b> XSLT qui permet de créer le
+			fichier master-gen.xml qui est une version plus simplifiée du fichier
+			de données.</li>
 		<li><a href="master-gen.xml"><b>master-gen.xml</b></a>: contient
-			les donnÃ©es qui seront publiÃ©es sur les pages HTML. Respecte la DTD
+			les données qui seront publiées sur les pages HTML. Respecte la DTD
 			suivante: master-dtd.dtd</li>
-		<li><b>master-stylesheet.xsl:</b> XSLT qui permet de crÃ©er tous
+		<li><b>master-stylesheet.xsl:</b> XSLT qui permet de créer tous
 			les <a href="www/">documents HTML</a> dans le dossier www/ en
 			utilisant les templates du dossier /templates. C'est aussi ici qu'on
 			trouve les lignes XPath (listes d'UEs et d'enseignants de Luminy)
-			demandÃ©es dans les fiches de TP.</li>
-		<li><b>master-schema.xsd:</b> schema qui vÃ©rifie master-gen.xml.</li>
-		<li><b>CreateDom.java:</b> fichier Java qui rÃ©pond Ã  la question
-			posÃ©e dans le sujet: faire la liste des noms des unitÃ©s.</li>
-		<li><b>xq.txt:</b> requÃªte XQuery qui rÃ©pond Ã  la question du
+			demandées dans les fiches de TP.</li>
+		<li><b>master-schema.xsd:</b> schema qui vérifie master-gen.xml.</li>
+		<li><b>CreateDom.java:</b> fichier Java qui répond à la question
+			posée dans le sujet: faire la liste des noms des unités.</li>
+		<li><b>xq.txt:</b> requête XQuery qui répond à la question du
 			sujet: donner pour chaque enseignant les UEs et parcours dont il est
 			responsable.</li>
-		<li><b>documentation.html:</b> vous Ãªtes en train de la lire.</li>
+		<li><b>documentation.html:</b> vous êtes en train de la lire.</li>
 	</ul>
 
-	<p>Les fichiers HTML sont organisÃ©s en plusieurs catÃ©gories:</p>
+	<p>Les fichiers HTML sont organisés en plusieurs catégories:</p>
 	<ul>
 		<li><b>index.html:</b> racine du projet. Contient un menu qui
 			contient des liens vers tous les autres.</li>
@@ -72,51 +72,54 @@
 			tous les fichiers des intervenants.</li>
 		<li><b>intervenant-ID.html:</b> est un fichier d'un intervenant.</li>
 		<li><b>masters.html:</b> contient une liste de liens vers tous
-			les fichiers des spÃ©cialitÃ©s.</li>
-		<li><b>specialite-ID.html:</b> est le fichier d'une spÃ©cialitÃ©.
+			les fichiers des spécialités.</li>
+		<li><b>specialite-ID.html:</b> est le fichier d'une spécialité.
 			Contient des liens vers les parcours.</li>
 		<li><b>parcours-ID.html:</b> est le fichier d'un parcours.</li>
-		<li><b>xq.html:</b> contient le rÃ©sultat de la requÃªte XQuery.</li>
+		<li><b>xq.html:</b> contient le résultat de la requête XQuery.</li>
 	</ul>
 
 
 	<h2>Makefile</h2>
 	<p>
-		Le Makefile correspond Ã  ce qui a Ã©tÃ© demandÃ© Ã  l'exception d'un ajout
-		de la commande <i>gen</i> qui permet de gÃ©nÃ©rer le fichier
-		master-gen.xml Ã  partir du fichier de donnÃ©es et du fichier
+		Le Makefile correspond à ce qui a été demandé à l'exception d'un ajout
+		de la commande <i>gen</i> qui permet de générer le fichier
+		master-gen.xml à partir du fichier de données et du fichier
 		donnees-to-xml.xsl.
 	</p>
 	<ul>
-		<li><b>gen: </b>construction du fichier de donnÃ©es XML</li>
+		<li><b>gen: </b>construction du fichier de données XML</li>
 		<li><b>dtd: </b>validation de la DTD</li>
 		<li><b>xsd: </b>validation du schema</li>
-		<li><b>web: </b>gÃ©nÃ©ration du dossier www/</li>
-		<li><b>xq: </b>crÃ©ation de la requÃªte XQuery</li>
+		<li><b>web: </b>génération du dossier www/</li>
+		<li><b>xq: </b>création de la requête XQuery</li>
 		<li><b>tidy: </b>validation des fichiers www./*.html. Validation
 			de la documentation</li>
-		<li><b>java: </b>crÃ©ation du fichier DOM</li>
+		<li><b>java: </b>création du fichier DOM</li>
 		<li><b>clean: </b>suppression de master-gen.xml, www/, dom.txt et
 			*.class</li>
 	</ul>
 
-	<h2>Utilisation et matÃ©riel requis</h2>
+	<h2>Utilisation et matériel requis</h2>
 	<p>
-		Il suffit de lancer la commande <i>make</i> dans le rÃ©pertoire
-		SiteMaster/ afin de construire toutes les donnÃ©es, ouvrez ensuite
-		www/index.html. Pour un bon fonctionnement il vous faudra:
+		Il suffit de lancer la commande <i>make</i> dans le répertoire
+		SiteMaster/ afin de construire toutes les données, ouvrez ensuite
+		www/index.html. <br />
+		<br /> Pour un bon fonctionnement il vous faudra:
 	</p>
 	<ul>
-		<li><b>tidy: </b> vÃ©rification HTML.</li>
+		<li><b>tidy: </b> vérification HTML.</li>
 		<li><b><a href="http://saxon.sourceforge.net/#F9.4HE">saxon-HE</a>:
-		</b>pour crÃ©er la requÃªte XQuery</li>
+		</b>pour créer la requête XQuery</li>
 		<li><b><a
 				href="http://www.dil.univ-mrs.fr/~massat/copie/xml/ress-XSD/">trang</a>:
-		</b>pour gÃ©nÃ©rer un schÃ©ma Ã  partir d'une DTD ou XML.<br /> <i>
+		</b>pour générer un schéma à partir d'une DTD ou XML.<br /> <i>
 				Commande: java -jar trang/trang-20030619/trang.jar master-dtd.dtd
 				master-schema.xsd</i></li>
 		<li><b>Eclipse-EE</b></li>
 	</ul>
-
+	<br />
+	<br />
+	<br />
 </body>
 </html>
