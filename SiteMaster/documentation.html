@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Master Informatique - Luminy</title>
-	<link rel="stylesheet" type="text/css" href="style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Master Informatique - Luminy</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 	<p class="new">
@@ -92,15 +92,31 @@
 		<li><b>dtd: </b>validation de la DTD</li>
 		<li><b>xsd: </b>validation du schema</li>
 		<li><b>web: </b>génération du dossier www/</li>
+		<li><b>xq: </b>création de la requête XQuery</li>
 		<li><b>tidy: </b>validation des fichiers www./*.html. Validation
 			de la documentation</li>
-		<li><b>xq: </b>création de la requête XQuery</li>
 		<li><b>java: </b>création du fichier DOM</li>
 		<li><b>clean: </b>suppression de master-gen.xml, www/, dom.txt et
 			*.class</li>
 	</ul>
 
-	<h2>Utilisation</h2>
-	<p>jkm</p>
+	<h2>Utilisation et matériel requis</h2>
+	<p>
+		Il suffit de lancer la commande <i>make</i> dans le répertoire
+		SiteMaster/ afin de construire toutes les données, ouvrez ensuite
+		www/index.html. Pour un bon fonctionnement il vous faudra:
+	</p>
+	<ul>
+		<li><b>tidy: </b> vérification HTML.</li>
+		<li><b><a href="http://saxon.sourceforge.net/#F9.4HE">saxon-HE</a>:
+		</b>pour créer la requête XQuery</li>
+		<li><b><a
+				href="http://www.dil.univ-mrs.fr/~massat/copie/xml/ress-XSD/">trang</a>:
+		</b>pour générer un schéma à partir d'une DTD ou XML.<br /> <i>
+				Commande: java -jar trang/trang-20030619/trang.jar master-dtd.dtd
+				master-schema.xsd</i></li>
+		<li><b>Eclipse-EE</b></li>
+	</ul>
+
 </body>
 </html>

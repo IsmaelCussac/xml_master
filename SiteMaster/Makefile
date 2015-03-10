@@ -41,6 +41,7 @@ java:
 	@echo "\nCréation du fichier DOM"
 	javac CreateDom.java
 	java CreateDom > dom.txt
+	@echo "\n"
 
 
 clean:
