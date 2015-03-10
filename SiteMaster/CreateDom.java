@@ -20,13 +20,17 @@ public class CreateDom {
 
 		Document docDataXml = DocumentBuilderFactory.newInstance()
 				.newDocumentBuilder().parse(xmlFile);
+
 		Document docOutXml = DocumentBuilderFactory.newInstance()
 				.newDocumentBuilder().newDocument();
 
-		NodeList nList = docDataXml.getDocumentElement().getElementsByTagName("ue");
+		// Récupère tous les éléments ue
+		NodeList nList = docDataXml.getDocumentElement().getElementsByTagName(
+				"ue");
 
 		Element racine = docOutXml.createElement("liste_unites");
 
+		// Ajout de noeuds
 		for (int i = 0; i < nList.getLength(); i++) {
 
 			Node nNode = nList.item(i);
@@ -38,13 +42,14 @@ public class CreateDom {
 
 		docOutXml.appendChild(racine);
 
+		// Serialization
 		TransformerFactory myFactory = TransformerFactory.newInstance();
 		Transformer transformer = myFactory.newTransformer();
 		transformer.setOutputProperty(OutputKeys.ENCODING, "ISO-8859-1");
 		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
 		transformer.setOutputProperty(OutputKeys.METHOD, "xml");
-		
+
 		transformer.transform(new DOMSource(docOutXml), new StreamResult(
 				System.out));
 
